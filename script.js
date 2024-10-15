@@ -174,31 +174,20 @@ function NavarAnimation() {
     const links = document.querySelectorAll('.navbar ul li a');
     const logo = document.querySelector('.top_logo');
 
-    if (window.scrollY > 50) {
-      navbar.style.backgroundColor = "var(--brown)";
-      navbar.style.padding = "0";
-
-      logo.style.width = "3%";
-
-      // links.forEach(link => {
-      //   link.style.color = "var(--white)";
-      // });
-
-      logo.style.width = "5%";
-      logo.style.src = "./images/logo.png";
-    } else {
-      navbar.style.backgroundColor = "transparent";
-      navbar.style.padding = ".5rem 0";
-
-      logo.style.width = "7%";
-
-      // links.forEach(link => {
-      //   link.style.color = "var(--white)";
-      // });
-
-      logo.style.width = "7%";
-      logo.style.src = "./images/intro_img/intro_logo.jpg";
+    const isScrolled = window.scrollY > 50;
+    navbar.style.backgroundColor = isScrolled ? "var(--brown)" : "transparent";
+    if (window.innerWidth > 992) {
+      navbar.style.padding = isScrolled ? ".5rem 0" : "1rem 0";
+      logo.style.width = isScrolled ? "3%" : "5%";
     }
+    window.addEventListener('scroll', function() {
+      var logo = document.getElementById('logo');
+      if (window.scrollY > 100) {
+          logo.src = 'images/logo_new.png';
+      } else {
+          logo.src = 'images/main_logo.png';
+      }
+    });
   });
 
   let lastScrollTop = 0;
@@ -221,57 +210,7 @@ document.querySelectorAll('.link_hover').forEach(link => {
 });
 
 
-
 NavarAnimation();
-
-
-// var swiper = new Swiper(".mySwiper", {
-//     spaceBetween: 30,
-//     // loop: true,
-//     centeredSlides: true,
-//     speed: 1500,
-//     grabCursor: true,
-//     autoplay: {
-//       delay: 2500,
-//       disableOnInteraction: false,
-//       pauseOnMouseEnter: true,
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//       dynamicBullets: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-    
-//   breakpoints: {
-//     640: {
-//       slidesPerView: 1,
-//       spaceBetween: 20,
-//     },
-//     1024: {
-//       slidesPerView: 1,
-//       spaceBetween: 20
-//     }
-//   }
-//   });
-
-
-  
-
-
-
-$(".carousel1").flickity({
-    wrapAround: true,
-    groupCells: 1,
-    autoPlay: 3000,
-    prevNextButtons: true,
-    selectedAttraction: 0.01,
-    friction: 0.15,
-})
-
 
 
 $.fn.responsiveTabs = function() {
@@ -296,22 +235,10 @@ $.fn.responsiveTabs = function() {
 
 }
 
-
 $('.responsive-tabs').responsiveTabs();
  
 
 // ----ACCORDION---//
-
-// $(document).ready(function(){
-//   $(".accordion1").on("click", ".heading", function() {
-
-//   $(this).toggleClass("active").next().slideToggle();
-
-//   $(".contents").not($(this).next()).slideUp(300);
-               
-//   $(this).siblings().removeClass("active");
-//   });
-//  });
 
  document.addEventListener('DOMContentLoaded', function() {
   const accordionHeaders = document.querySelectorAll('.accordion-item-header1');
@@ -352,6 +279,7 @@ $('.responsive-tabs').responsiveTabs();
     });
   });
 });
+
 
 function fancyBox(){
   Fancybox.bind('[data-fancybox="gallery"]', {
