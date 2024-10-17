@@ -176,7 +176,11 @@ function NavarAnimation() {
 
     const isScrolled = window.scrollY > 50;
     navbar.style.backgroundColor = isScrolled ? "var(--brown)" : "transparent";
+    
     if (window.innerWidth > 992) {
+     links.forEach(link => {
+      link.style.color = isScrolled ? "var(--creamclr)" : "var(--black)";
+     });
       navbar.style.padding = isScrolled ? ".5rem 0" : "1rem 0";
       logo.style.width = isScrolled ? "3%" : "5%";
     }
@@ -185,7 +189,7 @@ function NavarAnimation() {
       if (window.scrollY > 100) {
           logo.src = 'images/logo_new.png';
       } else {
-          logo.src = 'images/main_logo.png';
+          logo.src = 'images/logo.png';
       }
     });
   });
