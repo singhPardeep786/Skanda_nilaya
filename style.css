@@ -42,6 +42,8 @@ body::-webkit-scrollbar-thumb{
     --creamclr: #eae6db;
     --creamtext: #c5ae98;
     --maincolor: #6e5c48;
+    --maincolor2: #6f5d49de;
+    /*--maincolor2: #6f5d49a8*/
     --clubhousetext: #8a8793;
     --maincolorhover: #0a682bce;
     --textcolor: #c86c39;
@@ -166,7 +168,7 @@ body::-webkit-scrollbar-thumb{
 .link_hover {
     position: relative;
     transition: all ease .3s!important;
-    color: var(--white)!important;
+    color: var(--black);
     font-size: .8rem!important;
     text-transform: uppercase;
 }
@@ -1291,7 +1293,7 @@ bottom: 0;
 
     .navbar-collapse {
       background-color: var(--black);
-      margin-bottom: .5rem;
+      margin: .5rem 0;
     }
 
     .courtyard_intro_logo {
@@ -1393,6 +1395,9 @@ bottom: 0;
       width: 27%;
     }
 
+    .link_hover {
+      color: var(--creamclr)!important;
+    }
 
     .link_hover::after {
         display: none;
@@ -1464,7 +1469,7 @@ bottom: 0;
 
     .navbar-collapse {
       background-color: var(--black);
-      margin-bottom: .5rem;
+      margin: .5rem 0;
     }
 
     .courtyard_intro_logo {
@@ -1558,6 +1563,10 @@ bottom: 0;
     .intro_bg {
       background-attachment: scroll;
     }
+    
+    .link_hover {
+      color: var(--creamclr)!important;
+    }
 
     .link_hover::after {
         display: none;
@@ -1627,7 +1636,7 @@ bottom: 0;
 
   .navbar-collapse {
     background-color: var(--black);
-    margin-bottom: .5rem;
+    margin: .5rem 0;
   }
 
   .courtyard_intro_logo {
@@ -1706,6 +1715,10 @@ bottom: 0;
       width: 27%;
     }
 
+    .link_hover {
+      color: var(--creamclr)!important;
+    }
+
     .link_hover::after {
         display: none;
     }
@@ -1773,7 +1786,7 @@ bottom: 0;
 
   .navbar-collapse {
     background-color: var(--black);
-    margin-bottom: .5rem;
+    margin: .5rem 0;
   }
 
   .courtyard_intro_logo {
@@ -1848,6 +1861,10 @@ bottom: 0;
     .intro_logo {
       width: 27%;
     }
+    
+    .link_hover {
+      color: var(--creamclr)!important;
+    }
 
     .link_hover::after {
         display: none;
@@ -1916,7 +1933,7 @@ bottom: 0;
 
   .navbar-collapse {
     background-color: var(--black);
-    margin-bottom: .5rem;
+    margin: .5rem 0;
   }
 
   .courtyard_intro_logo {
@@ -1985,6 +2002,10 @@ bottom: 0;
   .image_height {
     height: auto!important;
   }
+  
+  .link_hover {
+      color: var(--creamclr)!important;
+    }
 
     .link_hover::after {
         display: none;
@@ -2061,7 +2082,7 @@ bottom: 0;
 
   .navbar-collapse {
     background-color: var(--black);
-    margin-bottom: .5rem;
+    margin: .5rem 0;
   }
 
   .courtyard_intro_logo {
@@ -2128,9 +2149,12 @@ bottom: 0;
     height: auto!important;
   }
 
-
     .intro_logo {
       width: 15%;
+    }
+    
+    .link_hover {
+      color: var(--creamclr)!important;
     }
 
     .link_hover::after {
@@ -2195,7 +2219,7 @@ bottom: 0;
 
   .navbar-collapse {
     background-color: var(--black);
-    margin-bottom: .5rem;
+    margin: .5rem 0;
   }
 
   .banner_content {
@@ -2260,6 +2284,10 @@ bottom: 0;
     .intro_logo {
       width: 15%;
     }
+    
+    .link_hover {
+      color: var(--creamclr)!important;
+    }
 
     .link_hover::after {
         display: none;
@@ -2319,7 +2347,7 @@ bottom: 0;
 
   .navbar-collapse {
     background-color: var(--black);
-    margin-bottom: .5rem;
+    margin: .5rem 0;
   }
 
   .courtyard_intro_logo {
@@ -2389,6 +2417,10 @@ bottom: 0;
     .intro_logo {
       width: 15%;
     }
+    
+    .link_hover {
+      color: var(--creamclr)!important;
+    }
 
     .link_hover::after {
         display: none;
@@ -2448,7 +2480,7 @@ bottom: 0;
 
   .navbar-collapse {
     background-color: var(--black);
-    margin-bottom: .5rem;
+    margin: .5rem 0;
   }
 
   .courtyard_intro_logo {
@@ -2516,6 +2548,10 @@ bottom: 0;
 
     .intro_logo {
       width: 15%;
+    }
+    
+    .link_hover {
+      color: var(--creamclr)!important;
     }
 
     .link_hover::after {
@@ -2576,7 +2612,7 @@ bottom: 0;
 
   .navbar-collapse {
     background-color: var(--black);
-    margin-bottom: .5rem;
+    margin: .5rem 0;
   }
 
   .courtyard_intro_logo {
@@ -2645,6 +2681,10 @@ bottom: 0;
 
     .intro_logo {
       width: 15%;
+    }
+    
+    .link_hover {
+      color: var(--creamclr)!important;
     }
 
     .link_hover::after {
