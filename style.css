@@ -972,6 +972,27 @@ h1, p, a, h4 {
   background-color: var(--aboutbg);
 }
 
+/*------FOR---MOBILE---AND---TABLET---SCREENS-----*/
+
+.scroll_hand {
+  font-size: 1rem;
+  color: var(--creamclr);
+  animation: handAnimation infinite linear 3s;
+  transform-origin: center;
+}
+
+@keyframes handAnimation {
+  0% {
+    translate: -.3rem 0;
+  }
+  50% {
+    translate: .3rem 0;
+  }
+  100% {
+    translate: -.3rem 0;
+  }
+}
+
 /* --------------SUTRAS---END----------- */
 
 
@@ -1534,9 +1555,13 @@ color:var(--white);
     height: 100vh;
     background: url('./images/CLubhouse\ &\ Aminities/clubhouse.png')no-repeat;
     background-size: 100% 100%;
+    -webkit-background-attachment: fixed;
     background-attachment: fixed;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: start;
     align-items: start;
+    -webkit-justify-content: start;
     justify-content: start;
   }
 
@@ -2518,6 +2543,21 @@ bottom: 0;
       background-size: cover;
     }
 
+    .sutras_slider {
+      height: 95vh;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      gap: 0;
+    }
+
+    .sutra1 h2:nth-child(2) {
+      font-size: 1rem;
+    }
+
+    .sutra1 p {
+      font-size: .8rem;
+    }
+
     .slider_content_img {
       width: 70%;
       margin: 0 auto;
@@ -2918,6 +2958,7 @@ bottom: 0;
       background-size: cover;
     }
 
+    
     .sutras_start_bg {
       height: 80vh;
     }
@@ -2933,6 +2974,21 @@ bottom: 0;
     
     .content {
       width: 100%;
+    }
+
+    .sutras_slider {
+      height: 95vh;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      gap: 0;
+    }
+
+    .sutra1 h2:nth-child(2) {
+      font-size: 1rem;
+    }
+
+    .sutra1 p {
+      font-size: .8rem;
     }
 
     .about_bg {
@@ -3292,6 +3348,21 @@ bottom: 0;
     width: 100%;
   }
 
+  .sutras_slider {
+    height: 95vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .sutra1 h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .sutra1 p {
+    font-size: .9rem;
+  }
+
   .about_bg {
     height: 90vh;
     background: url('./images/Sutras_images/about_img1.jpg')no-repeat;
@@ -3649,6 +3720,25 @@ bottom: 0;
     width: 80%;
   }
 
+  .sutras_slider {
+    height: 95vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .sutra1 h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .sutra1 p {
+    font-size: .9rem;
+  }
+
+  .sutras_imgs {
+    margin-top: -10rem;
+  }
+
   .about_bg {
     height: 95vh;
     background: url('./images/Sutras_images/about_img1.jpg')no-repeat;
@@ -3997,6 +4087,25 @@ bottom: 0;
 
   .content {
     width: 80%;
+  }
+  
+  .sutras_slider {
+    height: 95vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .sutra1 h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .sutra1 p {
+    font-size: .9rem;
+  }
+
+  .sutras_imgs {
+    margin-top: -10rem;
   }
   
   .about_bg {
@@ -4360,6 +4469,25 @@ bottom: 0;
     width: 80%;
   }
 
+  .sutras_slider {
+    height: 95vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .sutra1 h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .sutra1 p {
+    font-size: .9rem;
+  }
+
+  .sutras_imgs {
+    margin-top: -12rem;
+  }
+
   .about_bg {
     height: 95vh;
   }
@@ -4683,6 +4811,25 @@ bottom: 0;
     width: 80%;
   }
 
+  .sutras_slider {
+    height: 95vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .sutra1 h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .sutra1 p {
+    font-size: .9rem;
+  }
+
+  .sutras_imgs {
+    margin-top: -15rem;
+  }
+
   .about_bg {
     height: 95vh;
   }
@@ -4976,6 +5123,25 @@ bottom: 0;
 
   .content {
     width: 80%;
+  }
+
+  .sutras_slider {
+    height: 95vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .sutra1 h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .sutra1 p {
+    font-size: .9rem;
+  }
+
+  .sutras_imgs {
+    margin-top: -15rem;
   }
 
   .about_bg {
@@ -5273,6 +5439,25 @@ bottom: 0;
     width: 80%;
   }
 
+  .sutras_slider {
+    height: 95vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .sutra1 h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .sutra1 p {
+    font-size: .9rem;
+  }
+
+  .sutras_imgs {
+    margin-top: -15rem;
+  }
+  
   .about_bg {
     height: 95vh;
   }
@@ -5571,6 +5756,25 @@ bottom: 0;
 
   .content {
     width: 80%;
+  }
+
+  .sutras_slider {
+    height: 95vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .sutra1 h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .sutra1 p {
+    font-size: .9rem;
+  }
+
+  .sutras_imgs {
+    margin-top: -20rem;
   }
   
   .about_bg {

@@ -71,19 +71,21 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 
-gsap.to(" .slider", {
-  transform: "translateX(-400%)",
-  duration: 5,
-  scrollTrigger: {
-      trigger: ".pin_container",
-      scroller: "body",
-      // markers: true,
-      start: "top -3%",
-      end: "top -400%",
-      scrub: 2,
-      pin: true,
-  }
-})
+if(window.innerWidth > 992){
+  gsap.to(".slider", {
+    transform: "translateX(-400%)",
+    duration: 5,
+    scrollTrigger: {
+        trigger: ".pin_container",
+        scroller: "body",
+        // markers: true,
+        start: "top -3%",
+        end: "top -400%",
+        scrub: 2,
+        pin: true,
+    }
+  })
+}
 
 const overlay1 = document.querySelectorAll('.overlay1')
 const overlay3 = document.querySelectorAll('.overlay3')
