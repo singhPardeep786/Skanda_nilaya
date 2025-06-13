@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+
+Allow: /
+
+Sitemap: https://www.skandanilaya.in/sitemap.xml

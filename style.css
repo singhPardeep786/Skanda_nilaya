@@ -1,0 +1,6923 @@
+
+@font-face {
+    font-family: 'bold';
+    src: url(./FranceBold.woff2);
+}
+@font-face {
+    font-family: 'medium';
+    src: url(./FRANCEN2.woff2);
+}
+
+/* @font-face {
+    font-family: 'futura';
+    src: url(futura\ light\ bt.woff2);
+}
+@font-face {
+    font-family: 'mdbt';
+    src: url(futura\ medium\ bt.woff2);
+} */
+
+
+* {
+ margin: 0;
+ padding: 0;
+ font-family: 'medium';
+ box-sizing: border-box;
+ scroll-behavior: smooth;
+}
+ 
+html, body {
+ width: 100%;
+ height: 100%;
+}
+
+*::selection {
+  background-color: var(--maincolor);
+  color: var(--white);
+}
+
+body::-webkit-scrollbar{
+    background-color: var(--creamclr);
+    width: 7px;
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--maincolor);
+    /* border-radius: 50px; */
+}
+
+:root {
+    --aboutbg: #222122;
+    --creamclr: #eae6db;
+    --creamclr2:#eae6dbc7;
+    --creamtext: #c5ae98;
+    --maincolor: #6e5c48;
+    --maincolor2: #6f5d49de;
+    --maincolor3: #8f7b65;
+    --maincolor4: #6f5d49cb;
+    --maincolor5: #8f7b65b7;
+    --clubhousetext: #8a8793;
+    --maincolorhover: #0a682bce;
+    --textcolor: #c86c39;
+    --textcolor2: #d2ae6c;
+    --brown: #6e5c48;
+    /* --brown: #b05f23; */
+    --brown2: #b06023;
+    --lightbrown: #b39a84;
+    --white: #fff;
+    --whitetransparent: #ffffff96;
+    --navbg: #f8f2e6b2;
+    --lightwhite: #cecdcd;
+    --light: #f5f5f5ea;
+    --location_heading_bg: #E6E7E9;
+    --black: #000;
+    --arrow: #353746;
+    --blacktransparent: #000000a8;
+    --blacktransparent2: #00000067;
+    --transparent: #ececeeab;
+    --workbg: #ececee;
+    --labelcolor: #0000005d;
+    --green: #9cdd1b;
+    --green2: #28663faf;
+    --green3: #3e5f05;
+    --green4: #3e5f058e;
+}
+
+.brown {
+  color: var(--brown);
+}
+
+.logoclr {
+  color: var(--brown2);
+}
+
+.bold {
+  font-family: 'bold';
+}
+
+.medium {
+  font-family: 'medium';
+}
+
+.maincolor {
+  color: var(--maincolor);
+}
+
+.textcolor {
+  color: var(--textcolor)!important;
+}
+
+.textcolor2 {
+  color: var(--textcolor2)!important;
+}
+
+.creamclr {
+  color: var(--creamclr);
+}
+
+.creamtext {
+  color: var(--creamtext)!important;
+}
+
+.letter_spacing {
+  letter-spacing: 2px;
+}
+
+.location_heading_bg {
+  background-color: var(--location_heading_bg);
+}
+
+.stroke_text {
+    -webkit-text-stroke: 2px var(--black);
+    text-stroke: 2px var(--black);
+    -webkit-text-fill-color: transparent;
+}
+
+h1, p, a, h4 {
+  transition: all ease .5s;
+}
+
+/* --------------TO---TOP---BUTTON---START----------- */
+
+.to_top_btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--maincolor);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 99;
+  transform: translateY(-50%);
+  visibility: hidden;
+  transition: all ease .3s;
+  border: 1px solid var(--creamclr);
+}
+
+.to_top_btn:hover {
+  scale: 1.05;
+}
+
+.to_top_btn::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: 1px solid var(--creamclr);
+  border-left: 1px solid var(--creamclr);
+}
+
+.to_top_btn::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 30%;
+  background-color: var(--creamclr);
+  top: 60%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  transition: all ease .3s;
+}
+
+.to_top_btn:hover::after {
+  height: 40%;
+}
+
+
+/* --------------TO---TOP---BUTTON---END----------- */
+
+
+/* --------------FIXED---ICON---START----------- */
+
+.fixed_icon_box {
+  width: auto;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  border: 1px solid var(--creamclr);
+  transform: translateY(-30%) translateX(-75%);
+  transition: all ease .5s;
+  z-index: 99;
+}
+
+.fixed_icon {
+  color: var(--creamclr);
+  background-color: var(--maincolor);
+  padding: .5rem 1rem .5rem 2rem;
+  /* border-radius: 20px; */
+  transition: all ease .5s;
+}
+
+.fixed_icon_box:hover {
+  transform: translateY(-30%) translateX(-15%);
+}
+
+/* --------------FIXED---ICON---END----------- */
+
+
+/* --------------NAVBAR---START----------- */
+
+
+.nav_bg {
+  width: 70%;
+  margin: 0 auto;
+  background-color: var(--maincolor4);
+  /* border-radius: 30px; */
+  margin-top: .5rem;
+  /* backdrop-filter: blur(10px); */
+}
+
+.navbar-collapse {
+  /* background-color: var(--brown); */
+  /* margin: 1rem 0; */
+}
+
+.toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.toggler span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--creamclr);
+  transition: all 0.3s ease-in-out;
+}
+
+.toggler.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.toggler.active span:nth-child(2) {
+  opacity: 0;
+  scale: 0;
+}
+
+.toggler.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar-toggler {
+  border: none!important;
+  padding: .5rem!important;
+}
+
+.navbar-toggler:focus {
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+.navbar {
+  padding: 0!important;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+  display: initial!important;
+}
+
+.top_logo {
+  width: 7%;
+  /* margin: 0 auto; */
+  transition: all ease .5s;
+}
+
+.top_logo img {
+  background-color: var(--creamclr);
+  /* border-radius: 10px; */
+  padding: .5rem;
+}
+
+/* .logo {
+    width: 7%;
+    transition: all ease .5s;
+} */
+
+.link_hover {
+    position: relative;
+    /* transition: all ease .5s!important; */
+    color: var(--creamclr)!important;
+    font-size: .8rem!important;
+    text-transform: uppercase;
+}
+
+.link_hover::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--creamclr);
+    bottom: 17%;
+    left: 10%;
+    transition: all ease .5s;
+}
+
+.link_hover:hover::after {
+    width: 80%;
+}
+
+#navbar {
+  transition: transform 0.4s ease-in-out;
+}
+#navbar.hide {
+  transform: translateY(-110%);
+}
+
+/* --------------NAVBAR---END----------- */
+
+
+/* --------------BANNER---START----------- */
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid var(--lightbrown);
+}
+/* style="height: 100vh; width: 100%; background-color: var(--maincolor2); */
+.bg_slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./images/banner_bg2.jpg')no-repeat top center;
+  background-size: cover;
+}
+
+.slide1 {
+  width: 100%;
+  height: 100vh;
+  background: url('images/intro_img/bg_img.jpg')no-repeat top center;
+  background-size: cover;
+}
+
+.slide2 {
+  width: 100%;
+  height: 100vh;
+  background: url('images/intro_img/banner_bg_imgg.jpg')no-repeat top center;
+  background-size: 100% 110%;
+}
+
+.courtyard_banner_img {
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--maincolor2);
+  margin-top: 2rem;
+  border-top-right-radius: 20px;
+  /* border-top-right-radius: 20px; */
+}
+
+.courtyard_banner_intro_logo_box {
+  width: 20%;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--blacktransparent);
+  backdrop-filter: blur(2px);
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.courtyard_banner_intro_logo {
+  width: 80%;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(-1.5rem);
+  transition: all ease 1s;
+  transition-delay: .7s;
+}
+
+.banner_content {
+  width: 20%;
+  /* background-color: var(--blacktransparent); */
+  padding: .5rem 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  transition: all ease .3s;
+  overflow: hidden;
+}
+
+.banner_content h1 {
+  font-size: 2rem;
+}
+
+.banner_content2 {
+  width: 20%;
+  /* background-color: var(--blacktransparent); */
+  padding: .5rem 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  transition: all ease .3s;
+  overflow: hidden;
+}
+
+.swiper-slide h1 {
+    opacity: 0;
+    transition: all ease .7s;
+    transform: translateX(2rem);
+    transition-delay: .3s;
+  }
+
+  .swiper-slide-active h1 {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .swiper-slide-active .courtyard_banner_intro_logo {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.swiper-slide h2 {
+    opacity: 0;
+    transition: all ease .7s;
+    transform: translateX(2rem);
+    transition-delay: .3s;
+  }
+
+  .swiper-slide-active h2 {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .swiper-slide h3 {
+    opacity: 0;
+    transition: all ease .7s;
+    transform: translateY(-2rem);
+    transition-delay: .3s;
+  }
+
+  .swiper-slide-active h3 {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .banner_next {
+    left: 0!important;
+    top: 50%!important;
+    /* transform: translateY(-50%); */
+    background-color: var(--aboutbg);
+  }
+
+  .intro_logo {
+    width: 50%;
+    margin: auto;
+  }
+
+/* .swiper_height {
+  height: 70vh!important;
+} */
+
+.swiper_bg {
+  background-color: var(--creamclr)!important;
+}
+
+.left_icon {
+  color: var(--creamclr);
+  background-color: var(--maincolor);
+  padding: 1rem;
+  border-radius: 50%;
+  transition: .3s linear;
+  margin-left: -6rem;
+}
+
+.left_icon:hover {
+  margin-left: -7rem;
+}
+
+.right_icon {
+  color: var(--creamclr);
+  background-color: var(--maincolor);
+  padding: 1rem;
+  border-radius: 50%;
+  transition: .3s linear;
+  margin-right: -6rem;
+}
+
+.right_icon:hover {
+  margin-right: -7rem;
+}
+
+.carousel-indicators {
+  bottom: -10%!important;
+}
+
+.imagin_lifestyle {
+  width: 30%;
+  position: relative;
+  background-color: var(--white);
+  padding: 2rem;
+  line-height: 2rem;
+}
+
+.imagin_lifestyle::before {
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 30%;
+  border-top: 3px solid var(--maincolor);
+  border-left: 3px solid var(--maincolor);
+  top: 0;
+  left: 0;
+}
+
+.imagin_lifestyle::after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 30%;
+  border-bottom: 3px solid var(--maincolor);
+  border-right: 3px solid var(--maincolor);
+  bottom: 0;
+  right: 0;
+}
+
+.font_size {
+  font-size: 1.48rem;
+}
+
+.swiper-pagination {
+  background: var(--maincolor);
+  width: auto!important;
+  /* border-radius: 1.5rem; */
+  padding: 0 .375rem;
+  left: 50%!important;
+  transform: translateX(-50%)!important;
+}
+
+/* --------------BANNER---END----------- */
+
+
+/* --------------MANTRA---START----------- */
+
+.mantra_bg {
+  width: 100%;
+  height: 100vh;
+  background: url('./images/mantra_bg2.jpg')no-repeat top center;
+  background-size: 100% 100%;
+  border-bottom: 2px solid var(--lightbrown);
+}
+
+.sticky-highlight {
+  width: 100%;
+  height: 96vh;
+  position: relative;
+  /* padding: 100px 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.multi-highlight-container {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  width: 100%;
+  text-align: center;
+}
+
+.highlight-line {
+  position: relative;
+  /* margin: 30px 0; */
+  overflow: hidden;
+}
+
+.highlight-text {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 550;
+  color: var(--blacktransparent2);
+  position: relative;
+  z-index: 2;
+  opacity: 0.3;
+}
+
+.text-fill {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 550;
+  color: var(--creamclr);
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 1;
+  transition: width 0.1s linear;
+}
+
+/* --------------MANTRA---END----------- */
+
+/* --------------PROFOUND---START----------- */
+
+/* .profound_left_content {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--maincolor);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.profound_left_content img {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all ease .5s;
+}
+
+.profound_box {
+  width: 50%;
+  background-color: var(--creamclr);
+  padding: 2rem;
+}
+
+.profound_box h2 {
+  font-size: 2rem;
+}
+
+.profound_box h2,
+.profound_box h5 {
+  color: var(--maincolor);
+}
+
+.profound_right_content {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.profound_right_content img {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all ease .5s;
+}
+
+.profound_right_content_box {
+  width: 50%;
+  background-color: var(--maincolor);
+  padding: 2rem;
+}
+
+.profound_right_content_box h2,
+.profound_right_content_box p {
+  color: var(--creamclr);
+} */
+
+.profound_content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 1rem;
+  /* background-color: #eee6e1; */
+  flex-direction: column;
+  background: url('./images/courtyard_images/courtyard_img7.jpg')no-repeat;
+  background-size: 100% 120%;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.profound_content::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blacktransparent2);
+  top: 0;
+  left: 0;
+
+}
+
+.profound_img {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.profound_img img {
+  width: 100%;
+  animation: rotateImg 70s linear infinite;
+}
+
+.profound_box {
+  width: 50%;
+  background-color: var(--maincolor4);
+  padding: 2rem;
+  z-index: 2;
+}
+
+.profound_box h2 {
+  font-size: 2rem;
+}
+
+.profound_box h2,
+.profound_box h5,
+.profound_box p {
+  color: var(--creamclr);
+}
+
+/* --------------PROFOUND---END----------- */
+
+/* --------------HARMONY---LIFE---START------------ */
+
+.harmony_bg {
+  width: 100%;
+  min-height: 100vh;
+  background: url('./images/harmony_bg.jpg')top left;
+  background-size: 5%;
+  background-attachment: fixed;
+  background-color: var(--light);
+  background-blend-mode: overlay;
+}
+
+.harmony {
+  width: 40%;
+  margin: 0 auto;
+  background-color: var(--maincolor2);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+}
+
+.harmony h2, .harmony p {
+  color: var(--creamclr);
+}
+
+.harmony_content {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
+  background-color: var(--maincolor2);
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+.harmony_content h3 {
+  color: var(--creamclr);
+}
+
+.harmony_content p {
+  color: var(--creamclr);
+}
+
+/* --------------HARMONY---LIFE---END----------- */
+
+/* --------------ABOUT---START----------- */
+
+.about_bg {
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--aboutbg); */
+  background: url('./images/Sutras_images/about_img2.jpg')no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  border-bottom: 2px solid var(--lightbrown);
+}
+
+.courtyard_homes_about_bg {
+  width: 100%;
+  height: 100vh;
+  background: url('./images/intro_img/courtyard_img_bg.jpg')no-repeat ;
+  background-size: 100% 120%;
+  border-bottom: 2px solid var(--lightbrown);
+}
+
+.about {
+  width: 50%;
+  height: 100%;
+  background-color: var(--blacktransparent);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 5rem;
+  box-shadow: 10px 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about_section_content h2 {
+  color: var(--textcolor2);
+}
+
+.about_img {
+  width: 50%;
+  margin: 0 auto 0 auto;
+  /* position: absolute; */
+  transition: all ease .3s;
+}
+
+.overlay1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--blacktransparent);
+  top: 0;
+  left: 0;
+}
+
+/* --------------ABOUT---END----------- */
+
+
+/* --------------SUTRAS---START----------- */
+
+.sutras_start_bg {
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--maincolor); */
+  background: url('./all_plans/east_plans/east_courtyard.jpg')no-repeat;
+  background-size: 100% 100%;
+  /* background-position: -80px; */
+  background-attachment: fixed;
+  position: relative;
+  /* z-index: 2; */
+}
+
+.sutras_start_bg::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blacktransparent2);
+  top: 0;
+  left: 0;
+  /* z-index: 1; */
+}
+
+.sutras_intro {
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.sutras_intro img {
+  width: 100%;
+  opacity: 0.5;
+  animation: rotateImg 70s linear infinite;
+}
+
+@keyframes rotateImg {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sutra_start_content {
+  width: 50%;
+  z-index: 2;
+  box-shadow: -2px -7px 0px -30px var(--creamclr);
+  background-color: var(--maincolor2);
+  transition: all ease .5s;
+}
+
+.sutra_start_content:hover {
+  box-shadow: -2px -7px 96px -37px var(--creamclr);
+}
+
+.content {
+  width: 60%;
+  margin: auto;
+}
+
+.overlay2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--maincolor2);
+  top: 0;
+  left: 0;
+}
+
+.sutras_slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.slider {
+  min-width: 100%;
+  height: 100%;
+}
+
+.sutra1 {
+  width: 70%;
+  margin: auto;
+}
+
+.pin_container {
+  background-color: var(--aboutbg);
+}
+
+/* --------------SUTRAS---END----------- */
+
+
+/* --------------INTRODUCING---START----------- */
+
+.section_top_border {
+  border-top: 2px solid var(--maincolor);
+}
+
+.intro_bg {
+  height: 100vh;
+  background: url('images/intro_img/bg_img.jpg')no-repeat center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+}
+
+.intro_logo {
+  width: 12%;
+}
+
+.mandava_img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.philosopy_img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.courtyard_intro_logo {
+  width: 30%;
+  margin: auto;
+  transition: all ease .5s;
+}
+
+.overlay3 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--creamclr);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay3a {
+  width: 100%;
+  height: 100%;
+  background-color: var(--creamclr);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay4 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--creamclr);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay4a {
+  width: 100%;
+  height: 100%;
+  background-color: var(--creamclr);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.courtyard_popup {
+  opacity: 0;
+}
+
+.courtyard_popup h6 {
+  margin-top: .5rem;
+}
+
+/* --------------INTRODUCING---END----------- */
+
+
+/* --------------COURTYARD---VIEWS---SECTION---START----------- */
+
+.coutyard_view_border {
+  border-top: 2px solid var(--maincolor);
+  border-bottom: 2px solid var(--maincolor);
+}
+
+.swiper_bg {
+  background: url('images/courtyard_images/row_bg.jpg')no-repeat;
+  background-size: cover;
+}
+
+.slider_content {
+  width: 80%;
+  margin: auto;
+}
+
+.slider_content_img {
+  width: 90%;
+  transition: all ease .5s;
+}
+
+.timeless_allure_img {
+  width: 50%;
+  margin-left: -6rem;
+  transition: all ease .5s;
+}
+
+.traditional {
+  width: 70%;
+  transition: all ease .5s;
+}
+
+.natural_order {
+  width: 60%;
+  margin: auto;
+}
+
+.backyard_img {
+  width: 54%;
+}
+
+.backyard_rose_img {
+  width: 50%;
+}
+
+.traditionally {
+  width: 80%;
+}
+
+.courtyard_next_btn {
+  background-color: var(--creamclr);
+  color: var(--textcolor);
+  font-size: 1.2rem;
+  padding: .8rem 1rem;
+  border: 1px solid var(--textcolor);
+  transition: all ease .5s;
+  right: 15px!important;
+  position: relative;
+  z-index: 2;
+}
+
+.courtyard_next_btn:hover {
+  background-color: var(--textcolor);
+  color: var(--white);
+  border: 1px solid var(--textcolor);
+}
+
+.courtyard_next_btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--textcolor);
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s ease;
+  z-index: -1;
+}
+
+.courtyard_next_btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.courtyard_prev_btn {
+  background-color: var(--creamclr);
+  color: var(--textcolor);
+  font-size: 1.2rem;
+  padding: .8rem 1rem;
+  border: 1px solid var(--textcolor);
+  transition: all ease .5s;
+  left: 15px!important;
+  position: relative;
+  z-index: 2;
+}
+
+.courtyard_prev_btn:hover {
+  background-color: var(--textcolor);
+  color: var(--white);
+  border: 1px solid var(--textcolor);
+}
+
+.courtyard_prev_btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--textcolor);
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s ease;
+  z-index: -1;
+}
+
+.courtyard_prev_btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  top: 5%!important;
+  left: 94.8%!important;
+  transform: translateX(-94.8%)!important;
+  transition: all ease .5s;
+  /* opacity: 0; */
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  top: 5%!important;
+  right: 15px!important;
+  transition: all ease .5s;
+  transition-delay: .15s;
+  /* opacity: 0; */
+}
+
+/* .swiper:hover .swiper-button-prev, .swiper-rtl .swiper-button-next{
+  top: 5%!important;
+  opacity: 1;
+}
+
+.swiper:hover .swiper-button-next, .swiper-rtl .swiper-button-prev{
+  top: 5%!important;
+  opacity: 1;
+} */
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  border-radius: 0rem!important;
+  width: 5px;
+  height: 5px;
+  transition: width .5s ease;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  width: 30px;
+}
+
+.backyard_img {
+  transition: all ease .5s;
+}
+
+.backyard_rose_img {
+  transition: all ease .5s;
+}
+
+.pagination_width {
+  transition: all ease .5s;
+}
+
+
+/* --------------COURTYARD---VIEWS---SECTION---END----------- */
+
+
+/* --------------SKANDA---HOMES---START----------- */
+
+.skanda_nilaya_homes_bg {
+  width: 100%;
+  height: 100%;
+  background: url('images/courtyard_images/courtyard_img6.jpg')no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+
+.skanda_nilaya_homes_bg::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blacktransparent2);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.skanda_nilaya_homes {
+  width: 84%;
+  margin: 0 auto;
+  background-color: var(--creamclr2);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem;
+}
+
+.skanda_homes_boxes {
+  width: 100%;
+  min-height: 250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--creamclr2);
+  backdrop-filter: blur(5px);
+  padding:0 1rem;
+}
+
+.skanda_homes_boxes p {
+  text-align: center;
+}
+
+.line_shape {
+  width: 30%;
+  margin: 0 auto;
+}
+
+/* .overlay5 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--creamclr);
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* --------------SKANDA---HOMES---END----------- */
+
+
+/* --------------ALL--PLANS---START----------- */
+
+.border_bottom {
+  border-bottom: 2px solid var(--maincolor);
+}
+
+.master_plan {
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  transition: .3s linear;
+}
+
+.master_plan::before {
+  content: '';
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  border-top: 8px solid var(--maincolor);
+  border-left: 8px solid var(--maincolor);
+  top: 0;
+  left: 0;
+  transition: .3s linear;
+}
+
+.master_plan::after {
+  content: '';
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  border-bottom: 8px solid var(--maincolor);
+  border-right: 8px solid var(--maincolor);
+  bottom: 0;
+  right: 0;
+  transition: .3s linear;
+
+}
+
+.overlay_masterplan {
+  width: 96%;
+  height: 92.5%;
+  margin: 2% 0 0 2%;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  opacity: 0;
+  scale: 0.5;
+  background-color: var(--blacktransparent2);
+  transition: .3s linear;
+  z-index: 1;
+}
+
+.master_plan a:hover .overlay_masterplan {
+  opacity: 1;
+  scale: 1;
+}
+
+.ease_img_section {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.east_img_content {
+  width: 80%;
+  /* margin: auto; */
+}
+
+/* .master_plan a:hover {
+  padding: 1.5rem;
+} */
+
+dd{
+  background: var(--creamclr);
+  /* font-family: 'Fira Sans', sans-serif; */
+  overflow: hidden;
+}
+.responsive-tabs {    text-align:center;
+  /* font-family: 'Fira Sans', sans-serif; */
+  width: 80%;
+  margin: auto;
+ }
+ .responsive-tabs dt {
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cccccc+0,eeeeee+100 */
+background: var(--creamclr); /* Old browsers */
+/* background: -moz-linear-gradient(top,  #cccccc 0%, #eeeeee 100%); FF3.6+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#eeeeee)); Chrome,Safari4+
+background: -webkit-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); Chrome10+,Safari5.1+
+background: -o-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); Opera 11.10+
+background: -ms-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); IE10+
+background: linear-gradient(to bottom,  #cccccc 0%,#eeeeee 100%); W3C
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 ); IE6-9 */
+     
+   padding: 0.5em;
+   border: none;
+   cursor: pointer;
+   }
+
+ .responsive-tabs dt:first-child {
+   border-top: 0;
+   }
+ .responsive-tabs .active {
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002a5e+0,003d88+100 */
+background: var(--maincolor); /* Old browsers */
+/* background: -moz-linear-gradient(top,  #002a5e 0%, #003d88 100%); FF3.6+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#002a5e), color-stop(100%,#003d88)); Chrome,Safari4+
+background: -webkit-linear-gradient(top,  #002a5e 0%,#003d88 100%); Chrome10+,Safari5.1+
+background: -o-linear-gradient(top,  #002a5e 0%,#003d88 100%); Opera 11.10+
+background: -ms-linear-gradient(top,  #002a5e 0%,#003d88 100%); IE10+
+background: linear-gradient(to bottom,  #002a5e 0%,#003d88 100%); W3C
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002a5e', endColorstr='#003d88',GradientType=0 ); IE6-9 */
+color:var(--white);
+
+   }
+ .responsive-tabs .active + dd {
+   display: block;
+   }
+ .responsive-tabs dd {
+   display: none;
+   padding: 0.5em;
+   }
+
+.responsive-tabs-placeholder {
+ display: none;
+ }
+
+ .responsive-tabs dt {
+  background-color: var(--white);
+ }
+
+
+@media only screen and (min-width: 768px) {
+ dt {
+   width: 25%;
+}
+ .responsive-tabs {
+    display: flex;
+   }
+   .responsive-tabs dt {
+     float: left;
+     border-top: 0;
+     }
+   .responsive-tabs .active + dd {
+     display: none;
+     }
+
+ .responsive-tabs-placeholder {
+   clear: both;
+   display: block;
+   /* padding: 1em; */
+   /* border-top: 1px solid #ccc; */
+   }
+   
+  }
+  .ease_first_img {
+   position: relative;
+  }
+
+  .ease_first_img::before {
+   content: '';
+   position: absolute;
+   width: 50%;
+   height: 106%;
+   background-color: var(--maincolor);
+   top: -3%;
+   left: -3.5%;
+  }
+
+  .east_facing_img {
+   width: 100%;
+   height: 100%;
+   transition: .3s linear;
+   position: relative;
+  }
+
+  .east_facing_img {
+   position: relative;
+  }
+
+  .east_facing_img::after {
+   content: '';
+   position: absolute;
+   width: 50%;
+   height: 106%;
+   background-color: var(--maincolor);
+   top: -3%;
+   right: -1.5%;
+   z-index: -1;
+  }
+
+  .floor_plan_overlay {
+   width: 93.6%;
+   height: 100%;
+   margin: 0 0 0 4.1%;
+   position: absolute;
+   background-color: var(--blacktransparent2);
+   top: 0;
+   left: 0;
+   opacity: 0;
+   z-index: 1;
+   transition: .3s linear;
+  }
+
+  .east_facing_img a:hover .floor_plan_overlay {
+   opacity: 1;
+  }
+
+  /* .clubhouse_img {
+    position: relative;
+  }
+  
+  .clubhouse_overlay {
+   width: 93.6%;
+   height: 100%;
+   margin: 0 0 0 4.1%;
+   position: absolute;
+   background-color: var(--blacktransparent2);
+   top: 0;
+   left: 0;
+   opacity: 0;
+   z-index: 1;
+   transition: .3s linear;
+  }
+
+  .clubhouse_img:hover .clubhouse_overlay {
+   opacity: 1;
+  } */
+
+  .clubhouse_section {
+    width: 100%;
+    height: 100vh;
+    background: url('./images/CLubhouse\ &\ Aminities/clubhouse.png')no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .clubhouse_section_content {
+    width: 30%;
+    height: 100%;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 5px; */
+    background-color: var(--creamclr2);
+    backdrop-filter: blur(2px);
+  }
+
+  .clubhouse_section_content h2 {
+    color: var(--brown2);
+    transition: all ease .5s;
+  }
+
+  .clubhouse_section_content h3 {
+    font-size: 1.5rem;
+    color: var(--maincolor);
+    transition: all ease .5s;
+  }
+
+  .clubhouse_section_content p {
+    color: var(--maincolor);
+    font-size: 1.5rem;
+    transition: all ease .5s;
+  }
+
+  .clubhouse_section_img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  /* .clubhouse_section_img {
+    width: 30%;
+    margin: auto;
+  }
+  
+  .clubhouse_img {
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+    transition: .3s linear;
+  }
+  
+  .clubhouse_img::before {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    border-top: 8px solid var(--maincolor);
+    border-right: 8px solid var(--maincolor);
+    top: 0;
+    right: 0;
+    transition: .3s linear;
+  }
+  
+  .clubhouse_img::after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    border-bottom: 8px solid var(--maincolor);
+    border-left: 8px solid var(--maincolor);
+    bottom: 0;
+    left: 0;
+    transition: .3s linear;
+  
+  } */
+  
+  /* .clubhouse_overlay {
+    width: 95%;
+    height: 92%;
+    margin: 2% 0 0 2.5%;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    opacity: 0;
+    background-color: var(--blacktransparent2);
+    transition: .3s linear;
+    z-index: 1;
+  }
+  
+  .clubhouse_img a:hover .clubhouse_overlay {
+    opacity: 1;
+    top: 1%;
+  } */
+  
+  /* .clubhouse_img a:hover .clubhouse_img::after{
+    top: 5%;
+  } */
+  .clubhouse_amenities_start {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .clubhouse_amenities_left_part {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clubhouse_amenities_right_part {
+    width: 70%;
+    display: flex;
+    gap: 5px;
+  }
+
+  .clubhouse_amenities_interiors {
+    width: 40%;
+    height: 100%;
+  }
+  
+  .clubhouse_logo {
+    width: 50%;
+    transition: all ease .5s;
+    /* margin: auto; */
+  }
+
+  .clubhouse_aminity {
+    columns: 300px;
+  }
+  
+  .aminities li::marker {
+    color: var(--textcolor);
+  }
+
+  .floor_plan_bg {
+    width: 100%;
+    height: 100%;
+    background: url('all_plans/east_plans/east_bg.jpg')no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  .west_floor_plan_bg {
+    width: 100%;
+    height: 100%;
+    background: url('all_plans/west_plans/west_img_bg.jpg')no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  .west_floor_plan_bg2 {
+    width: 100%;
+    height: 100%;
+    background: url('all_plans/west_plans/west_img_bg2.jpg')no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+/* --------------ALL--PLANS---END----------- */
+
+
+/* --------------REWIND---START----------- */
+
+.lets_courtyard {
+  position: relative;
+  padding: 1rem;
+}
+
+.lets_courtyard::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  background-color: var(--brown);
+  bottom: -1%;
+  left: 0;
+  z-index: -1;
+}
+
+.lets_courtyard::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  background-color: var(--lightbrown);
+  top: -2%;
+  left: -2%;
+  z-index: -1;
+}
+
+.lets_courtyard2 {
+  position: relative;
+  padding: 1rem;
+}
+
+.lets_courtyard2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  background-color: var(--brown);
+  bottom: -1%;
+  left: 0;
+  z-index: -1;
+}
+
+.lets_courtyard2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  background-color: var(--lightbrown);
+  top: -2%;
+  right: -2%;
+  z-index: -1;
+}
+
+.rewind_img {
+  width: 20%;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+}
+
+.rewind_img::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background-color: var(--maincolor);
+  bottom: -10%;
+  left: 25%;
+}
+
+.relive_img {
+  width: 20%;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+}
+
+.relive_img::after {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  background-color: var(--maincolor);
+  bottom: -10%;
+  left: 35%;
+}
+
+.refersh_img {
+  width: 20%;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+}
+
+.refersh_img::after {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  background-color: var(--maincolor);
+  bottom: -10%;
+  left: 35%;
+}
+
+.rewind_img_main {
+    width: 60%;
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    background-color: var(--green2);
+}
+
+.rewind_img_content {
+    position: relative;
+}
+
+.rewind_img_content::before {
+    content: '';
+    position: absolute;
+    width: 9%;
+    height: 20%;
+    border-top: 8px solid var(--green);
+    border-left: 8px solid var(--green);
+    top: 0%;
+    left: 0%;
+}
+
+.rewind_img_content::after {
+    content: '';
+    position: absolute;
+    width: 8%;
+    height: 20%;
+    border-right: 8px solid var(--green);
+    border-bottom: 8px solid var(--green);
+    bottom: 0%;
+    right: 0%;
+}
+
+.virtual_div {
+    width: 90%;
+    padding: 2.2rem 1.5rem;
+    background-color: var(--maincolor);
+    /* border: 2px solid var(--green); */
+    position: relative;
+}
+
+.virtual_div::before {
+    content: '';
+    position: absolute;
+    width: 6.2%;
+    height: 16%;
+    border-top: 8px solid var(--green);
+    border-left: 8px solid var(--green);
+    top: 0%;
+    left: 0%;
+}
+
+.virtual_div::after {
+    content: '';
+    position: absolute;
+    width: 5.4%;
+    height: 17%;
+    border-right: 8px solid var(--green);
+    border-bottom: 8px solid var(--green);
+    bottom: 0%;
+    right: 0%;
+}
+
+.small_line {
+  position: relative;
+  display: inline-block;
+}
+
+.small_line::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background-color: var(--maincolor);
+  bottom: -36%;
+  left: 25%;
+}
+
+.small_line2 {
+  position: relative;
+  display: inline-block;
+}
+
+.small_line2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background-color: var(--maincolor);
+  bottom: -36%;
+  left: 24%;
+}
+
+.parallax_div {
+  width: 95%;
+  height: 100vh;
+  background: url('images/Skanda_Nilaya_19.jpg')no-repeat center;
+  background-attachment: fixed;
+}
+
+.parallax_div2 {
+  width: 95%;
+  float: right;
+  height: 100vh;
+  background: url('images/Skanda_Nilaya_13.jpg')no-repeat center;
+  background-attachment: fixed;
+}
+
+.parallax_div3 {
+  width: 95%;
+  height: 100vh;
+  background: url('images/new_fruits.jpg')no-repeat center;
+  background-attachment: fixed;
+}
+
+/* --------------REWIND---END----------- */
+
+/* --------------GALLERY---START----------- */
+
+  .swiper_slider {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    display: none;
+  }
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    display: none;
+  }
+
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    background-color: var(--creamtext);
+    border: 2px solid var(--creamtext);
+  }
+  
+
+  .gallery_slider {
+    width: 100%;
+    height: 80vh;
+  }
+
+
+.carousel1 {
+    width: 100%;
+  }
+  
+  .carousel-cell1 {
+    width: 90%;
+    height: 80vh;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  
+
+/* position dots up a bit */
+.flickity-page-dots {
+    bottom: 20px!important;
+  }
+  /* dots are lines */
+  .flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .cell_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--green2);
+    padding: 1.2rem;
+  }
+
+
+/* --------------GALLERY---END----------- */
+
+/* -----------OUTDOOR---AMINITIES---START----------- */
+
+.outdoor_amenities_box {
+  width: 100%;
+  min-height: 380px;
+  background-color: var(--white);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease;
+  z-index: 1;
+  opacity: 0;
+  object-fit: cover;
+}
+
+.outdoor_amenities_box:hover .hover_img {
+  transform: translateY(0);
+  z-index: 3;
+  opacity: 1;
+}
+
+.outdoor_amenities {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.5s ease;
+  padding: 2rem;
+}
+
+.outdoor_amenities h3 {
+  color: var(--brown2);
+  transition: all 0.5s ease;
+  transition-delay: 0.1s;
+}
+
+.outdoor_amenities p {
+  color: var(--maincolor);
+  transition: all 0.5s ease;
+  transition-delay: 0.15s;
+  text-align: center;
+}
+
+.amenitiy_icon {
+  width: 20%;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease;
+  transition-delay: 0.17s;
+}
+
+.outdoor_amenities_box:hover .outdoor_amenities h3,
+.outdoor_amenities_box:hover .outdoor_amenities p,
+.outdoor_amenities_box:hover .amenitiy_icon {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.image_height {
+  height: 61.7%!important;
+}
+
+.paragrapgh_font_size {
+  transition: all ease .5s;
+}
+.paragrapgh_font_size h3 {
+  transition: all ease .5s;
+}
+.paragrapgh_font_size p {
+  transition: all ease .5s;
+}
+
+/* -----------OUTDOOR---AMINITIES---END----------- */
+
+
+/* --------------SPECIFICATIONS---START----------- */
+
+.specification_icon {
+  width: 35%;
+  margin: auto;
+  transition: all ease .5s;
+}
+
+.specifications:hover .specification_icon {
+  scale: 1.07;
+}
+
+.specifications p {
+  transition: all ease .5s;
+  font-size: .8rem!important;
+}
+
+.accordion1 {
+  width: 100%;
+  /* margin: 15rem 0 0 0; */
+}
+
+.accordion-item1 {
+  /* border: 1px solid #ccc; */
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.accordion-item-header1 {
+  background-color: var(--maincolor);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-item-header1:hover {
+  background-color: var(--maincolorhover);
+}
+
+.accordion-item-body1 {
+  padding: 0 1rem;
+  margin-top: .3rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+.icon {
+    font-size: 2rem;
+  transition: transform 0.3s;
+}
+
+.icon.plus {
+  transform: rotate(0deg);
+}
+
+.icon.minus {
+  transform: rotate(45deg);
+}
+
+/* --------------SPECIFICATIONS---END----------- */
+
+
+/* --------------LOCATION---START----------- */
+
+.location_highlights {
+  padding: .3rem;
+}
+
+.location_highlights h3 {
+  color: var(--brown2);
+  transition: all ease .5s;
+}
+
+.location_highlights p {
+  /* font-size: 0.8rem; */
+  transition: all ease .5s;
+}
+
+.location_content_font h3, p {
+  transition: all ease .5s;
+  font-size: .9rem;
+}
+
+.proximity_img {
+  position: relative;
+  transition: all ease .5s;
+}
+
+.proximity_img::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  transition: all ease .5s;
+  z-index: 2;
+}
+
+.proximity_img:hover::after {
+  opacity: 0;
+}
+
+/* --------------LOCATION---END----------- */
+
+
+/* --------------CONTACT---START----------- */
+
+.contact_bg {
+  width: 100%;
+  height: 100%;
+  background: url('./images/intro_img/philosophy.jpg');
+  background-size: 3%;
+  background-attachment: fixed;
+  background-color: var(--light);
+  background-blend-mode: overlay;
+}
+
+.form_focus {
+  width: 70%!important;
+  margin: auto;
+}
+
+.form_focus:focus {
+  outline: 2px solid var(--maincolor)!important;
+  box-shadow: none!important;
+  border: none!important;
+}
+
+.form-floating>label {
+  transition: opacity .1s ease-in-out,transform .3s ease-in-out!important;
+  color: var(--maincolor);
+  left: 15%!important;
+  padding: 1.45rem 0.75rem!important;
+}
+
+/* .form-floating>.form-control, .form-floating>.form-control-plaintext {
+} */
+
+.form-floating>.form-control, .form-floating>.form-control-plaintext, .form-floating>.form-select {
+  height: calc(4rem + calc(var(--bs-border-width) * 2))!important;
+  min-height: calc(4.5rem + calc(var(--bs-border-width) * 2))!important;
+}
+
+.padding_txtarea {
+  padding: 2.3rem 0.75rem!important;
+  height: calc(4.5rem + calc(var(--bs-border-width) * 2))!important;
+  min-height: calc(4.5rem + calc(var(--bs-border-width) * 2))!important;
+}
+
+.submit_btn {
+    width: 70%;
+    position: relative;
+    background-color: transparent;
+    color: var(--black);
+    border: 1px solid var(--black);
+    padding: .8rem 1.8rem;
+    margin-top: 1rem;
+    /* overflow: hidden; */
+    transition: ease .5s;
+    border-radius: 5px;
+}
+
+.submit_btn:hover {
+    color: var(--white);
+    border: 1px solid var(--maincolor);
+}
+
+.submit_btn::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--maincolor);
+    left: 0;
+    top: 0;
+    transition: ease .5s;
+    z-index: -1;
+}
+
+.submit_btn:hover::before {
+    width: 100%;
+}
+
+.input_margin {
+    margin:0 0 0 12.2rem!important;
+    width: 83%!important;
+}
+
+.input_focus:focus {
+    outline: 2px solid var(--maincolor)!important;
+    box-shadow: none!important;
+    border: none!important;
+}
+
+.input_margin2 {
+    margin: 0 0 0 7.4rem!important;
+    width: 82%!important;
+}
+
+.label_margin {
+    margin-left: -15%!important;
+}
+
+.label_margin2 {
+    margin-left: -15%!important;
+}
+
+/* --------------CONTACT---END----------- */
+
+
+/* --------------FOOTER---START----------- */
+
+.footer_bg {
+  background-color: var(--maincolor);
+}
+
+.footer_logo {
+    width: 30%;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.icons {
+    width: auto;
+}
+
+.facebook_icon {
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: .85rem 1.1rem;
+    transition: ease .5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.facebook_icon:hover {
+    color: var(--maincolor);
+    /* transform: translateY(-.3rem) scale(1.11); */
+}
+
+.facebook_icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  bottom: -100%;
+  left: 0;
+  transition: all ease .5s;
+  z-index: -1;
+}
+
+.facebook_icon:hover::after {
+bottom: 0;
+}
+
+.x_icon {
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: .85rem;
+    transition: ease .5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.x_icon:hover {
+    color: var(--maincolor);
+    /* transform: translateY(-.3rem) scale(1.11); */
+}
+
+.x_icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  bottom: -100%;
+  left: 0;
+  transition: all ease .5s;
+  z-index: -1;
+}
+
+.x_icon:hover::after {
+bottom: 0;
+}
+
+.copyright_select::selection {
+  background-color: var(--white);
+  color: var(--maincolor);
+}
+
+/* --------------FOOTER---END----------- */
+
+/* -----RESPONSIVE--CODES------- */
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+
+  .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex!important;
+  }
+
+  .navbar {
+    padding: .5rem 0!important;
+  }
+  
+  .nav_bg {
+    width: 90%;
+    border-radius: 15px;
+  }
+
+    .top_logo {
+        width: 15%;
+    }
+
+    .top_logo img {
+      border-radius: 3px;
+      padding: 0.4rem;
+    }
+
+    .navbar-collapse {
+      background-color: var(--black);
+      margin-bottom: .5rem;
+    }
+
+    .courtyard_intro_logo {
+      width: 100%;
+    }
+    
+    .banner_content {
+      width: 80%;
+      padding: .3rem 0;
+    }
+
+    .banner_content h3 {
+      font-size: 1.3rem!important;
+    }
+
+    .banner_content h1 {
+      font-size: 1.5rem;
+    }
+
+    .banner_content2 {
+      width: 80%;
+      padding: .3rem 0;
+    }
+
+    .banner_content2 h3 {
+      font-size: 1.3rem!important;
+    }
+
+    .banner_content2 h2 {
+      font-size: 1.5rem;
+    }
+
+    .slider_content p {
+      font-size: .95rem!important;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    .pagination_width {
+      width: 70%!important;
+      padding: 0!important;
+    }
+
+    .bg_slide {
+      height: 95vh;
+      background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+      background-size: 170% 100%;
+    }
+    
+    .slide1 {
+      height: 95vh;
+      background-size: 252% 100%;
+    }
+
+    .slide2 {
+      height: 95vh;
+      background-size: cover;
+    }
+
+    .courtyard_banner_intro_logo_box {
+      width: 100%;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -85%);
+      backdrop-filter: blur(1px);
+    }
+
+    .mantra_bg {
+      height: 80vh;
+      background-size: 120% 100%;
+    }
+
+    .sticky-highlight {
+      height: 75vh;
+    }
+    
+    .highlight-text, .text-fill {
+      font-size: 1.2rem;
+    }
+    
+    .courtyard_homes_about_bg {
+      height: 100%;
+      background-size: cover;
+    }
+
+    .slider_content_img {
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 2.5rem;
+    }
+    
+    .timeless_allure_img {
+      width: 40%;
+    }
+    
+    .natural_order {
+      margin-bottom: 2.01rem;
+    }
+    
+    .backyard_rose_img {
+      width: 40%;
+      margin-top: .5rem;
+    }
+    
+    .backyard_img {
+      width: 40%;
+      margin-top: .5rem;
+    }
+
+    .img7_heading h2 {
+      font-size: 1.3rem;
+    }
+
+    .img7_heading p {
+      font-size: .9rem;
+    }
+
+    .skanda_nilaya_homes {
+      width: 100%;
+    }
+    
+    .clubhouse_logo {
+      width: 30%;
+    }
+
+    .aminities {
+      text-align: left;
+      display: inline-block;
+      margin: auto;
+    }
+    
+    .image_height {
+      height: auto!important;
+    }
+    
+    .banner_img_overlay {
+      width: 80%;
+    }
+
+    .profound_content {
+      height: 100%;
+    }
+
+    .profound_img {
+      width: 100%;
+    }
+    
+    .profound_left_content {
+      gap: 1rem;
+    }
+    
+    .profound_left_content img {
+      width: 110%;
+    }
+    
+    .profound_box {
+      width: 100%;
+    }
+
+    .profound_box h2 {
+      font-size: 1.5rem;
+    }
+
+    .profound_box p {
+      font-size: 0.8rem;
+    }
+    
+    .profound_right_content img {
+      width: 110%;
+    }
+
+    .profound_right_content_box {
+      width: 90%;
+    }
+
+    .profound_right_content_box h2 {
+      font-size: 1.5rem;
+    }
+
+    .profound_right_content_box p {
+      font-size: .8rem;
+    }
+
+    .harmony {
+      width: 90%;
+    }
+
+    .sutras_start_bg {
+      height: 70vh;
+    }
+
+    .sutras_intro {
+      width: 100%;
+    }
+
+    .sutra_start_content {
+      width: 90%;
+      padding: 2rem .2rem;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    .about_bg {
+      height: 90vh;
+      background: url('./images/Sutras_images/about_img1.jpg')no-repeat;
+      background-size: 150% 120%;
+    }
+    
+    .about {
+      width: 80%;
+      height: fit-content;
+      padding: 2rem 0;
+    }
+
+    .about_img {
+      width: 50%;
+    }
+  
+
+    .imagin_lifestyle {
+      width: 65%;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .intro_logo {
+      width: 27%;
+    }
+
+    .link_hover {
+      color: var(--creamclr)!important;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+        display: none;
+      }
+      .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+        display: none;
+      }
+
+      .clubhouse_amenities_start {
+        display: contents;
+      }
+
+      .clubhouse_amenities_left_part {
+        width: 100%;
+      }
+
+      .clubhouse_amenities_right_part {
+        width: 100%;
+      }
+
+      .clubhouse_section {
+        background: url('./images/CLubhouse\ &\ Aminities/clubhouse.jpg')no-repeat;
+        background-size: 140% 100%;
+        background-attachment: fixed;
+        background-position-x: -80px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .clubhouse_section_content {
+        width: 85%;
+        height: fit-content;
+        padding: 2rem 0;
+      }
+      
+      /* .aminity_div {
+        width: 61%;
+      }
+
+      .aminity_div2 {
+        width: 61%;
+      }
+
+      .aminity_div3 {
+        width: 61%;
+        padding: 3.5rem 2.5rem;
+      } */
+
+      .outdoor_amenities {
+        width: 85%;
+        padding: 0;
+      }
+  
+      .amenitiy_icon {
+        width: 23%;
+      }
+
+      .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      }
+
+      .footer_logo {
+        width: 40%;
+      }
+  }
+  
+  @media screen and (min-width: 451px) and (max-width: 560px) {
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+    
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 15%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+    .navbar-collapse {
+      background-color: var(--black);
+      margin-bottom: .5rem;
+    }
+
+    .courtyard_intro_logo {
+      width: 100%;
+    }
+    
+    .banner_content {
+      width: 70%;
+      padding: .3rem 0;
+    }
+
+    .banner_content h3 {
+      font-size: 1.3rem!important;
+    }
+
+    .banner_content h1 {
+      font-size: 1.5rem;
+    }
+
+    .banner_content2 {
+      width: 70%;
+      padding: .3rem 0;
+    }
+
+    .banner_content2 h3 {
+      font-size: 1.3rem!important;
+    }
+
+    .banner_content2 h2 {
+      font-size: 1.5rem;
+    }
+
+    .bg_slide {
+      height: 95vh;
+      background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+      background-size: 170% 100%;
+    }
+    
+    .slide1 {
+      height: 95vh;
+      background-size: 180% 100%;
+    }
+
+    .slide2 {
+      height: 95vh;
+      background-size: 250% 120%;
+    }
+
+    .courtyard_banner_intro_logo_box {
+      width: 100%;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -80%);
+      backdrop-filter: blur(1px);
+    }
+
+    .courtyard_banner_intro_logo {
+      width: 60%;
+    }
+
+    .mantra_bg {
+      height: 80vh;
+      background-size: 110% 100%;
+    }
+
+    .sticky-highlight {
+      height: 80vh;
+    }
+    
+    .highlight-text, .text-fill {
+      font-size: 1.3rem;
+    }
+
+    .profound_img {
+      width: 100%;
+    }
+    
+    .profound_left_content {
+      gap: 1rem;
+    }
+    
+    .profound_left_content img {
+      width: 110%;
+    }
+    
+    .profound_box {
+      width: 90%;
+    }
+
+    .profound_box h2 {
+      font-size: 1.5rem;
+    }
+
+    .profound_box p {
+      font-size: 0.8rem;
+    }
+    
+    .profound_right_content img {
+      width: 110%;
+    }
+
+    .profound_right_content_box {
+      width: 90%;
+    }
+
+    .profound_right_content_box h2 {
+      font-size: 1.5rem;
+    }
+
+    .profound_right_content_box p {
+      font-size: .8rem;
+    }
+
+    .harmony {
+      width: 90%;
+    }
+    
+    .courtyard_homes_about_bg {
+      height: 100%;
+      background-size: cover;
+    }
+
+    .sutras_start_bg {
+      height: 80vh;
+    }
+
+    .sutras_intro {
+      width: 100%;
+    }
+
+    .sutra_start_content {
+      width: 90%;
+      padding: 2rem .2rem;
+    }
+    
+    .content {
+      width: 100%;
+    }
+
+    .about_bg {
+      height: 90vh;
+      background: url('./images/Sutras_images/about_img1.jpg')no-repeat;
+      background-size: 150% 120%;
+    }
+    
+    .about {
+      width: 80%;
+      height: fit-content;
+      padding: 2rem 0;
+    }
+
+    .about_img {
+      width: 50%;
+    }
+    
+    .pagination_width {
+      width: 65%!important;
+    }
+
+    .slider_content_img {
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+    .timeless_allure_img {
+      width: 40%;
+      margin-bottom: 3rem;
+  }
+    
+  .traditional {
+    width: 60%;
+  }
+  
+    .backyard_rose_img {
+      width: 40%;
+      margin-top: .5rem;
+    }
+    
+    .backyard_img {
+      width: 40%;
+      margin-top: .5rem;
+    }
+
+    .img7_heading h2 {
+      font-size: 1.3rem;
+    }
+
+    .img7_heading p {
+      font-size: 1rem;
+    }
+
+    .image_height {
+      height: auto!important;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    .skanda_nilaya_homes {
+      width: 100%;
+    }
+
+    /* .clubhouse_logo {
+      width: 30%;
+    } */
+
+    .clubhouse_amenities_start {
+      display: contents;
+    }
+
+    .clubhouse_amenities_left_part {
+      width: 100%;
+    }
+
+    .clubhouse_amenities_right_part {
+      width: 100%;
+    }
+
+    .clubhouse_section {
+      background: url('./images/CLubhouse\ &\ Aminities/clubhouse.jpg')no-repeat;
+      background-size: 140% 100%;
+      background-attachment: fixed;
+      background-position-x: -80px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .clubhouse_section_content {
+      width: 85%;
+      height: fit-content;
+      padding: 2rem 0;
+    }
+
+    .clubhouse_section_img {
+      width: 40%;
+    }
+
+    .aminities {
+      text-align: left;
+      display: inline-block;
+      margin: auto;
+    }
+
+    .imagin_lifestyle {
+      width: 65%;
+    }
+
+    .intro_logo {
+      width: 27%;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      margin-bottom: 2.01rem;
+    }
+  
+    .outdoor_amenities {
+      width: 85%;
+      padding: 0;
+    }
+
+    .amenitiy_icon {
+      width: 23%;
+    }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+        display: none;
+      }
+      .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+        display: none;
+      }
+
+      .aminity_div {
+        width: 44%;
+      }
+
+      .aminity_div2 {
+        width: 44%;
+      }
+
+      .aminity_div3 {
+        width: 41%;
+        padding: 3rem 2.5rem;
+      }
+
+      .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      }
+
+  }
+  
+  @media screen and (min-width: 561px) and (max-width: 600px){
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 12%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+  .navbar-collapse {
+    background-color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .courtyard_intro_logo {
+    width: 100%;
+  }
+
+  .banner_content {
+    width: 70%;
+    padding: .3rem 0;
+  }
+
+  .banner_content h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner_content2 {
+    width: 70%;
+    padding: .3rem 0;
+  }
+
+  .banner_content2 h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg_slide {
+    height: 95vh;
+    background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+    background-size: 150% 100%;
+  }
+  
+  .slide1 {
+    height: 95vh;
+    background-size: 150% 100%;
+  }
+
+  .slide2 {
+    height: 95vh;
+    background-size: 250% 120%;
+  }
+
+  .courtyard_banner_intro_logo_box {
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    backdrop-filter: blur(1px);
+  }
+
+  .courtyard_banner_intro_logo {
+    width: 50%;
+  }
+
+  .mantra_bg {
+    height: 85vh;
+    background-size: 110% 100%;
+  }
+
+  .sticky-highlight {
+    height: 85vh;
+  }
+  
+  .highlight-text, .text-fill {
+    font-size: 1.5rem;
+  }
+
+  .profound_img {
+    width: 100%;
+  }
+
+  .profound_left_content {
+    gap: 1rem;
+  }
+  
+  .profound_left_content img {
+    width: 110%;
+  }
+  
+  .profound_box {
+    width: 90%;
+  }
+
+  .profound_box h2 {
+    font-size: 1.5rem;
+  }
+
+  .profound_box p {
+    font-size: 0.8rem;
+  }
+  
+  .profound_right_content img {
+    width: 110%;
+  }
+
+  .profound_right_content_box {
+    width: 90%;
+  }
+
+  .profound_right_content_box h2 {
+    font-size: 1.5rem;
+  }
+
+  .profound_right_content_box p {
+    font-size: .8rem;
+  }
+
+  .harmony {
+    width: 90%;
+  }
+
+  .courtyard_homes_about_bg {
+    height: 100%;
+    background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .sutras_start_bg {
+    height: 90vh;
+  }
+
+  .sutras_intro {
+    width: 100%;
+  }
+
+  .sutra_start_content {
+    width: 90%;
+    padding: 2rem .2rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .about_bg {
+    height: 90vh;
+    background: url('./images/Sutras_images/about_img1.jpg')no-repeat;
+    background-size: 150% 120%;
+  }
+  
+  .about {
+    width: 60%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .about_img {
+    width: 50%;
+  }
+
+  .slider_content_img {
+    width: 80%;
+  }
+
+  .timeless_allure_img {
+    width: 40%;
+    margin-bottom: 2rem;
+  }
+
+  .traditional {
+    width: 60%;
+  }
+  
+  .backyard_rose_img {
+    width: 40%;
+    margin-top: .5rem;
+  }
+  
+  .backyard_img {
+    width: 40%;
+    margin-top: .5rem;
+  }
+
+  .skanda_nilaya_homes {
+    width: 100%;
+  }
+  
+  /* .clubhouse_logo {
+    width: 30%;
+  } */
+
+  .clubhouse_amenities_start {
+    display: contents;
+  }
+
+  .clubhouse_amenities_left_part {
+    width: 100%;
+  }
+
+  .clubhouse_amenities_right_part {
+    width: 100%;
+  }
+  
+  .clubhouse_section {
+    background: url('./images/CLubhouse\ &\ Aminities/clubhouse.jpg')no-repeat;
+    background-size: 140% 100%;
+    background-attachment: fixed;
+    background-position-x: -80px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clubhouse_section_content {
+    width: 85%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .clubhouse_section_img {
+    width: 40%;
+  }
+  
+  .aminities {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .image_height {
+    height: auto!important;
+  }
+
+    .imagin_lifestyle {
+      width: 65%;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .intro_logo {
+      width: 27%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      margin-bottom: 2.01rem;
+    }
+
+    .col_margin {
+        margin-top: 5rem!important;
+    }
+
+    .float_none {
+        float: none!important;
+    }
+
+    .rewind_img_main {
+        width: 90%;
+        bottom: 10%;
+        left: 5%;
+    }
+
+    .gallery_slider {
+      height: 33vh;
+    }
+
+    .flickity-page-dots {
+      bottom: -25px!important;
+    }
+
+    .carousel-cell1 {
+      height: auto;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+        display: none;
+      }
+      .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+        display: none;
+      }
+
+      .aminity_div {
+        width: 40%;
+      }
+  
+      .aminity_div2 {
+        width: 40%;
+      }
+  
+      .aminity_div3 {
+        width: 40%;
+        padding: 3rem 2.5rem;
+      }
+
+      .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      }
+  
+  }
+  
+  @media screen and (min-width: 576px) and (max-width: 600px) {
+    .courtyard_homes_about_bg {
+      height: 70vh;
+      background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 700px) {
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 12%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+  .navbar-collapse {
+    background-color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .courtyard_intro_logo {
+    width: 100%;
+  }
+
+  .banner_content {
+    width: 60%;
+    padding: .3rem 0;
+  }
+
+  .banner_content h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner_content2 {
+    width: 60%;
+    padding: .3rem 0;
+  }
+
+  .banner_content2 h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg_slide {
+    height: 95vh;
+    background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+    background-size: 150% 100%;
+  }
+  
+  .slide1 {
+    height: 95vh;
+    background-size: 180% 100%;
+  }
+
+  .slide2 {
+    height: 95vh;
+    background-size: 200% 120%;
+  }
+
+  .courtyard_banner_intro_logo_box {
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    backdrop-filter: blur(1px);
+  }
+
+  .courtyard_banner_intro_logo {
+    width: 50%;
+  }
+
+  .mantra_bg {
+    height: 85vh;
+    background-size: 110% 100%;
+  }
+
+  .sticky-highlight {
+    height: 85vh;
+  }
+  
+  .highlight-text, .text-fill {
+    font-size: 1.7rem;
+  }
+
+  .profound_img {
+    width: 90%;
+  }
+
+  .profound_left_content {
+    gap: 1rem;
+  }
+  
+  .profound_box {
+    width: 80%;
+  }
+
+  .profound_box h2 {
+    font-size: 1.7rem;
+  }
+
+  .profound_box p {
+    font-size: 0.9rem;
+  }
+
+  .profound_right_content_box {
+    width: 80%;
+  }
+
+  .profound_right_content_box h2 {
+    font-size: 1.7rem;
+  }
+
+  .profound_right_content_box p {
+    font-size: .9rem;
+  }
+
+  .harmony {
+    width: 90%;
+  }
+
+  .courtyard_homes_about_bg {
+    height: 80vh;
+    background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+    background-size: 100% 102%;
+  } 
+
+  .sutras_start_bg {
+    height: 90vh;
+  }
+
+  .sutras_intro {
+    width: 90%;
+  }
+
+  .sutra_start_content {
+    width: 80%;
+    padding: 2rem .2rem;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .about_bg {
+    height: 95vh;
+    background: url('./images/Sutras_images/about_img1.jpg')no-repeat;
+    background-size: 150% 120%;
+  }
+  
+  .about {
+    width: 60%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .about_img {
+    width: 50%;
+  }
+
+  .slider_content_img {
+    width: 80%;
+  }
+
+  .timeless_allure_img {
+    width: 40%;
+    margin-bottom: 2rem;
+  }
+
+  .traditional {
+    width: 60%;
+  }
+  
+  .backyard_rose_img {
+    width: 40%;
+    margin-top: .5rem;
+  }
+  
+  .backyard_img {
+    width: 40%;
+    margin-top: .5rem;
+  }
+
+  .skanda_nilaya_homes {
+    width: 100%;
+  }
+  
+  .clubhouse_logo {
+    width: 30%;
+  }
+
+  .image_height {
+    height: auto!important;
+  }
+
+  .clubhouse_amenities_start {
+    display: contents;
+  }
+
+  .clubhouse_amenities_left_part {
+    width: 100%;
+  }
+
+  .clubhouse_amenities_right_part {
+    width: 100%;
+  }
+  
+  .clubhouse_section {
+    background: url('./images/CLubhouse\ &\ Aminities/clubhouse.jpg')no-repeat;
+    background-size: 140% 100%;
+    background-attachment: fixed;
+    background-position-x: -80px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clubhouse_section_content {
+    width: 80%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .clubhouse_section_img {
+    width: 40%;
+  }
+
+  .aminities {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+  }
+
+    .imagin_lifestyle {
+      width: 65%;
+    }
+
+    .gallery_slider {
+      height: 33vh;
+    }
+
+    .flickity-page-dots {
+      bottom: -25px!important;
+    }
+
+    .carousel-cell1 {
+      height: auto;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .intro_logo {
+      width: 27%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      margin-bottom: 2.01rem;
+    }
+
+    .col_margin {
+        margin-top: 5rem!important;
+    }
+
+    .float_none {
+        float: none!important;
+    }
+
+    .rewind_img_main {
+        width: 80%;
+        bottom: 10%;
+        left: 5%;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+        display: none;
+      }
+
+      .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+        display: none;
+      }
+
+      .aminity_div {
+        width: 40%;
+      }
+  
+      .aminity_div2 {
+        width: 40%;
+      }
+  
+      .aminity_div3 {
+        width: 40%;
+        padding: 3rem 2.5rem;
+      }
+
+      .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      }
+  
+  }
+  
+  @media screen and (min-width: 701px) and (max-width: 767px) {
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+    
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 10%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+  .navbar-collapse {
+    background-color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .courtyard_intro_logo {
+    width: 100%;
+  }
+  
+  .banner_content {
+    width: 50%;
+    padding: .3rem 0;
+  }
+
+  .banner_content h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner_content2 {
+    width: 50%;
+    padding: .3rem 0;
+  }
+
+  .banner_content2 h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg_slide {
+    height: 95vh;
+    background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+    background-size: 140% 100%;
+  }
+  
+  .slide1 {
+    height: 95vh;
+    background-size: 180% 100%;
+  }
+
+  .slide2 {
+    height: 95vh;
+    background-size: 200% 110%;
+  }
+
+  .courtyard_banner_intro_logo_box {
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    backdrop-filter: blur(1px);
+  }
+
+  .courtyard_banner_intro_logo {
+    width: 40%;
+  }
+
+  .mantra_bg {
+    height: 90vh;
+    background-size: 110% 100%;
+  }
+
+  .sticky-highlight {
+    height: 90vh;
+  }
+  
+  .highlight-text, .text-fill {
+    font-size: 1.9rem;
+  }
+
+  .profound_img {
+    width: 80%;
+  }
+  
+  .profound_left_content {
+    gap: 1rem;
+  }
+  
+  .profound_box {
+    width: 80%;
+  }
+
+  .profound_box h2 {
+    font-size: 1.7rem;
+  }
+
+  .profound_box p {
+    font-size: 0.9rem;
+  }
+
+  .profound_right_content_box {
+    width: 80%;
+  }
+
+  .profound_right_content_box h2 {
+    font-size: 1.7rem;
+  }
+
+  .profound_right_content_box p {
+    font-size: .9rem;
+  }
+
+  .harmony {
+    width: 90%;
+  }
+
+  .courtyard_homes_about_bg {
+    height: 80vh;
+    background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+    background-size: 100% 102%;
+  } 
+
+  .sutras_start_bg {
+    height: 90vh;
+  }
+
+  .sutras_intro {
+    width: 80%;
+  }
+
+  .sutra_start_content {
+    width: 80%;
+    padding: 2rem .2rem;
+  }
+
+  .content {
+    width: 80%;
+  }
+  
+  .about_bg {
+    height: 95vh;
+    background-size: 150% 100%;
+  }
+  
+  .about {
+    width: 60%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .about_img {
+    width: 40%;
+  }
+  
+  .slider_content_img {
+    width: 60%;
+  }
+
+  .timeless_allure_img {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+
+  .traditional {
+    width: 40%;
+  }
+  
+  .backyard_rose_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+  
+  .backyard_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+
+  .skanda_nilaya_homes {
+    width: 100%;
+  }
+  
+  /* .clubhouse_logo {
+    width: 30%;
+  } */
+
+  .clubhouse_amenities_start {
+    display: contents;
+  }
+
+  .clubhouse_amenities_left_part {
+    width: 100%;
+  }
+
+  .clubhouse_amenities_right_part {
+    width: 100%;
+  }
+
+  .clubhouse_section {
+    background: url('./images/CLubhouse\ &\ Aminities/clubhouse.jpg')no-repeat;
+    background-size: 140% 100%;
+    background-attachment: fixed;
+    background-position-x: -80px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clubhouse_section_content {
+    width: 60%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .clubhouse_section_img {
+    width: 40%;
+  }
+  
+  .aminities {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .image_height {
+    height: auto!important;
+  }
+
+    .imagin_lifestyle {
+      width: 65%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      width: 40%;
+      margin-bottom: 2.01rem;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .intro_logo {
+      width: 27%;
+    }
+
+    .col_margin {
+        margin-top: 5rem!important;
+    }
+
+    .float_none {
+        float: none!important;
+    }
+
+    .rewind_img_main {
+        width: 70%;
+        bottom: 7%;
+        left: 5%;
+    }
+
+    .gallery_slider {
+      height: 33vh;
+    }
+
+    .flickity-page-dots {
+      bottom: -25px!important;
+    }
+
+    .carousel-cell1 {
+      height: auto;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+        display: none;
+      }
+      .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+        display: none;
+      }
+
+      .aminity_div {
+        width: 40%;
+      }
+  
+      .aminity_div2 {
+        width: 40%;
+      }
+  
+      .aminity_div3 {
+        width: 40%;
+        padding: 3rem 2.5rem;
+      }
+
+      .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      }
+  
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 769px) {
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 12%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+  .navbar-collapse {
+    background-color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .courtyard_intro_logo {
+    width: 100%;
+  }
+
+  .banner_content {
+    width: 50%;
+    padding: .3rem 0;
+  }
+
+  .banner_content h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner_content2 {
+    width: 50%;
+    padding: .3rem 0;
+  }
+
+  .banner_content2 h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg_slide {
+    height: 95vh;
+    background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+    background-size: 150% 100%;
+  }
+  
+  .slide1 {
+    height: 95vh;
+    background-size: 180% 100%;
+  }
+
+  .slide2 {
+    height: 95vh;
+    background-size: 250% 100%;
+  }
+
+  .courtyard_banner_intro_logo_box {
+    width: 100%;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -82%);
+    backdrop-filter: blur(1px);
+  }
+
+  .courtyard_banner_intro_logo {
+    width: 40%;
+  }
+
+  .mantra_bg {
+    height: 95vh;
+    background-size: 110% 100%;
+  }
+
+  .sticky-highlight {
+    height: 95vh;
+  }
+  
+  .highlight-text, .text-fill {
+    font-size: 1.9rem;
+  }
+
+  .profound_img {
+    width: 80%;
+  }
+
+  .profound_left_content {
+    gap: 1rem;
+  }
+  
+  .profound_box {
+    width: 80%;
+  }
+
+  .profound_box h2 {
+    font-size: 1.7rem;
+  }
+
+  .profound_box p {
+    font-size: 0.9rem;
+  }
+
+  .profound_right_content_box {
+    width: 80%;
+  }
+
+  .profound_right_content_box h2 {
+    font-size: 1.7rem;
+  }
+
+  .profound_right_content_box p {
+    font-size: .9rem;
+  }
+  
+  .harmony {
+    width: 60%;
+  }
+
+  .harmony_content {
+    height: 350px;
+  }
+
+  .harmony_content h3 {
+    font-size: 1.2rem;
+  }
+
+  .harmony_content p {
+    font-size: .8rem;
+  }
+  
+  .courtyard_homes_about_bg {
+    height: 80vh;
+    background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+    background-size: 100% 102%;
+  } 
+
+  .sutras_start_bg {
+    height: 90vh;
+  }
+
+  .sutras_intro {
+    width: 80%;
+  }
+
+  .sutra_start_content {
+    width: 80%;
+    padding: 2rem .2rem;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .about_bg {
+    height: 95vh;
+  }
+  
+  .about {
+    width: 60%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .about_img {
+    width: 40%;
+  }
+  
+  .slider_content_img {
+    width: 60%;
+  }
+
+  .timeless_allure_img {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+
+  .traditional {
+    width: 40%;
+  }
+  
+  .backyard_rose_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+  
+  .backyard_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+
+  .skanda_nilaya_homes {
+    width: 100%;
+  }
+  
+  /* .clubhouse_logo {
+    width: 25%;
+  } */
+
+  .clubhouse_section {
+    background: url('./images/CLubhouse\ &\ Aminities/clubhouse.jpg')no-repeat;
+    background-size: 140% 100%;
+    background-attachment: fixed;
+    background-position-x: -80px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clubhouse_section_content {
+    width: 60%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .clubhouse_section_img {
+    width: 40%;
+  }
+
+  .clubhouse_amenities_start {
+    height: 50vh;
+  }
+  
+  .aminities {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
+  .image_height {
+    height: auto!important;
+  }
+
+    .imagin_lifestyle {
+      width: 65%;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .intro_logo {
+      width: 15%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      margin-bottom: 2.01rem;
+    }
+
+    /* .aminity_div {
+      width: 61%;
+    }
+
+    .aminity_div2 {
+      width: 61%;
+    }
+
+    .aminity_div3 {
+      width: 61%;
+      padding: 3rem 2.5rem;
+    } */
+
+    .outdoor_amenities {
+      width: 85%;
+      padding: 0;
+    }
+
+    .amenitiy_icon {
+      width: 23%;
+    }
+    
+    .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      }
+
+      .footer_logo {
+        width: 20%;
+      }
+  
+  } 
+  
+  @media screen and (min-width: 770px) and (max-width: 799px) {
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 10%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+  .courtyard_intro_logo {
+    width: 100%;
+  }
+
+  .navbar-collapse {
+    background-color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .banner_content {
+    width: 50%;
+    padding: .3rem 0;
+  }
+
+  .banner_content h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner_content2 {
+    width: 50%;
+    padding: .3rem 0;
+  }
+
+  .banner_content2 h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg_slide {
+    height: 95vh;
+    background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+    background-size: 150% 100%;
+  }
+  
+  .slide1 {
+    height: 95vh;
+    background-size: 180% 100%;
+  }
+
+  .slide2 {
+    height: 95vh;
+    background-size: 180% 100%;
+  }
+
+  .courtyard_banner_intro_logo_box {
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    backdrop-filter: blur(1px);
+  }
+
+  .courtyard_banner_intro_logo {
+    width: 40%;
+  }
+
+  .mantra_bg {
+    height: 95vh;
+    background-size: 110% 100%;
+  }
+
+  .sticky-highlight {
+    height: 95vh;
+  }
+  
+  .highlight-text, .text-fill {
+    font-size: 2rem;
+  }
+  
+  .profound_img {
+    width: 80%;
+  }
+  
+  .profound_left_content {
+    gap: 1rem;
+  }
+  
+  .profound_box {
+    width: 75%;
+  }
+
+  .profound_box h2 {
+    font-size: 1.7rem;
+  }
+
+  .profound_box p {
+    font-size: 0.9rem;
+  }
+
+  .profound_right_content_box {
+    width: 60%;
+  }
+
+  .profound_right_content_box h2 {
+    font-size: 1.7rem;
+  }
+
+  .profound_right_content_box p {
+    font-size: .9rem;
+  }
+
+  .harmony {
+    width: 90%;
+  }
+
+  .harmony_content h3 {
+    font-size: 1.2rem;
+  }
+
+  .harmony_content p {
+    font-size: .8rem;
+  }
+  
+  .courtyard_homes_about_bg {
+    height: 90vh;
+    background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+    background-size: 100% 102%;
+  } 
+
+  .sutras_start_bg {
+    height: 90vh;
+  }
+
+  .sutras_intro {
+    width: 80%;
+  }
+
+  .sutra_start_content {
+    width: 70%;
+    padding: 2rem .2rem;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .about_bg {
+    height: 95vh;
+  }
+  
+  .about {
+    width: 50%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .about_img {
+    width: 50%;
+  }
+  
+  .slider_content_img {
+    width: 60%;
+  }
+
+  .timeless_allure_img {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+
+  .traditional {
+    width: 40%;
+  }
+  
+  .backyard_rose_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+  
+  .backyard_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+
+  .clubhouse_logo {
+    width: 25%;
+  }
+
+  .clubhouse_section {
+    background: url('./images/CLubhouse\ &\ Aminities/clubhouse.jpg')no-repeat;
+    background-size: 140% 100%;
+    background-attachment: fixed;
+    background-position-x: -80px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clubhouse_section_content {
+    width: 60%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .clubhouse_section_img {
+    width: 40%;
+  }
+  
+  .aminities {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .image_height {
+    height: auto!important;
+  }
+
+    .imagin_lifestyle {
+      width: 65%;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .intro_logo {
+      width: 15%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      width: 40%;
+      margin-bottom: 2.01rem;
+    }
+
+    /* .aminity_div {
+      width: 62%;
+    }
+
+    .aminity_div2 {
+      width: 61%;
+    }
+
+    .aminity_div3 {
+      width: 61%;
+      padding: 3rem 2.5rem;
+    } */
+
+    .outdoor_amenities {
+      width: 85%;
+      padding: 0;
+    }
+
+    .amenitiy_icon {
+      width: 23%;
+    }
+
+    .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      }
+
+      .footer_logo {
+        width: 20%;
+      }
+  
+  }
+  
+  @media screen and (min-width: 800px) and (max-width: 820px) {
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 10%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+  .navbar-collapse {
+    background-color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .courtyard_intro_logo {
+    width: 100%;
+  }
+
+  .banner_content {
+    width: 50%;
+    padding: .3rem 0;
+  }
+
+  .banner_content h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner_content2 {
+    width: 50%;
+    padding: .3rem 0;
+  }
+
+  .banner_content2 h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg_slide {
+    height: 95vh;
+    background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+    background-size: 150% 100%;
+  }
+  
+  .slide1 {
+    height: 95vh;
+    background-size: 180% 100%;
+  }
+
+  .slide2 {
+    height: 95vh;
+    background-size: 150% 100%;
+  }
+
+  .courtyard_banner_intro_logo_box {
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    backdrop-filter: blur(1px);
+  }
+
+  .courtyard_banner_intro_logo {
+    width: 40%;
+  }
+
+  .mantra_bg {
+    height: 95vh;
+    background-size: 110% 100%;
+  }
+
+  .sticky-highlight {
+    height: 95vh;
+  }
+  
+  .highlight-text, .text-fill {
+    font-size: 2rem;
+  }
+
+  .profound_img {
+    width: 75%;
+  }
+  
+  .profound_box {
+    width: 80%;
+  }
+
+  .profound_right_content_box {
+    width: 60%;
+  }
+
+  .harmony {
+    width: 90%;
+  }
+
+  .harmony_content h3 {
+    font-size: 1.2rem;
+  }
+
+  .harmony_content p {
+    font-size: .8rem;
+  }
+
+  .courtyard_homes_about_bg {
+    height: 90vh;
+    background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+    background-size: 100% 102%;
+  } 
+
+  .sutras_start_bg {
+    height: 90vh;
+  }
+
+  .sutras_intro {
+    width: 80%;
+  }
+
+  .sutra_start_content {
+    width: 70%;
+    padding: 2rem .2rem;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .about_bg {
+    height: 95vh;
+  }
+  
+  .about {
+    width: 50%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .about_img {
+    width: 50%;
+  }
+  
+  .slider_content_img {
+    width: 60%;
+  }
+
+  .timeless_allure_img {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+
+  .traditional {
+    width: 40%;
+  }
+  
+  .backyard_rose_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+  
+  .backyard_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+
+  .clubhouse_logo {
+    width: 25%;
+  }
+
+  .clubhouse_section {
+    background-size: 120% 100%;
+    background-position-x: -80px;
+  }
+
+  .clubhouse_section_content {
+    width: 35%;
+  }
+
+  .clubhouse_section_content h2,
+  .clubhouse_section_content h3,
+  .clubhouse_section_content p {
+    font-size: 1.2rem;
+  }
+
+  .clubhouse_section_img {
+    width: 60%;
+  }
+  
+  .aminities {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .image_height {
+    height: auto!important;
+  }
+
+    .imagin_lifestyle {
+      width: 40%;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .intro_logo {
+      width: 15%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      width: 40%;
+      margin-bottom: 2.01rem;
+    }
+
+    .outdoor_amenities {
+      width: 85%;
+      padding: 0;
+    }
+
+    .amenitiy_icon {
+      width: 23%;
+    }
+
+    /* .aminity_div {
+      width: 61%;
+    }
+
+    .aminity_div2 {
+      width: 61%;
+    }
+
+    .aminity_div3 {
+      width: 61%;
+      padding: 3rem 2.5rem;
+    } */
+
+    .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      }
+
+      .footer_logo {
+        width: 20%;
+      }
+  
+  }
+  
+  @media screen and (min-width: 821px) and (max-width: 920px) {
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 8%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+  .navbar-collapse {
+    background-color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .courtyard_intro_logo {
+    width: 100%;
+  }
+  
+  .banner_content {
+    width: 40%;
+    padding: .3rem 0;
+  }
+
+  .banner_content h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner_content2 {
+    width: 40%;
+    padding: .3rem 0;
+  }
+
+  .banner_content2 h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg_slide {
+    height: 95vh;
+    background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+    background-size: 110% 100%;
+  }
+  
+  .slide1 {
+    height: 95vh;
+    background-size: 180% 100%;
+  }
+
+  .slide2 {
+    height: 95vh;
+    background-size: 150% 100%;
+  }
+
+  .courtyard_banner_intro_logo_box {
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    backdrop-filter: blur(1px);
+  }
+
+  .courtyard_banner_intro_logo {
+    width: 30%;
+  }
+
+  .mantra_bg {
+    height: 95vh;
+    background-size: 110% 100%;
+  }
+
+  .sticky-highlight {
+    height: 95vh;
+  }
+  
+  .highlight-text, .text-fill {
+    font-size: 2.1rem;
+  }
+
+  .profound_img {
+    width: 70%;
+  }
+  
+  .profound_box {
+    width: 80%;
+  }
+
+  .profound_right_content_box {
+    width: 60%;
+  }
+
+  .harmony {
+    width: 90%;
+  }
+
+  .harmony_content h3 {
+    font-size: 1.2rem;
+  }
+
+  .harmony_content p {
+    font-size: .8rem;
+  }
+
+  .courtyard_homes_about_bg {
+    height: 90vh;
+    background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+    background-size: 100% 102%;
+  } 
+
+  .sutras_start_bg {
+    height: 90vh;
+  }
+
+  .sutras_intro {
+    width: 80%;
+  }
+
+  .sutra_start_content {
+    width: 70%;
+    padding: 2rem .2rem;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .about_bg {
+    height: 95vh;
+  }
+  
+  .about {
+    width: 45%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .about_img {
+    width: 50%;
+  }
+  
+  .slider_content_img {
+    width: 60%;
+  }
+
+  .timeless_allure_img {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+
+  .traditional {
+    width: 40%;
+  }
+  
+  .backyard_rose_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+  
+  .backyard_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+
+  .clubhouse_logo {
+    width: 20%;
+  }
+
+  .clubhouse_section {
+    background-size: 120% 100%;
+    background-position-x: -80px;
+  }
+
+  .clubhouse_section_content {
+    width: 35%;
+  }
+
+  .clubhouse_section_content h2,
+  .clubhouse_section_content h3,
+  .clubhouse_section_content p {
+    font-size: 1.2rem;
+  }
+
+  .clubhouse_section_img {
+    width: 60%;
+  }
+  
+  .aminities {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .image_height {
+    height: auto!important;
+  }
+
+    .imagin_lifestyle {
+      width: 40%;
+    }
+
+    .intro_bg {
+      background-attachment: scroll;
+    }
+
+    .intro_logo {
+      width: 15%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      width: 40%;
+      margin-bottom: 2.01rem;
+    }
+
+    .outdoor_amenities {
+      width: 85%;
+      padding: 0;
+    }
+
+    .amenitiy_icon {
+      width: 23%;
+    }
+
+    /* .aminity_div {
+      width: 61%;
+    }
+
+    .aminity_div2 {
+      width: 61%;
+    }
+
+    .aminity_div3 {
+      width: 61%;
+      padding: 3rem 2.5rem;
+    } */
+
+    .outdoor_amenities {
+      width: 85%;
+      padding: 0;
+    }
+
+    .amenitiy_icon {
+      width: 23%;
+    }
+
+    .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      } 
+
+      .footer_logo {
+        width: 20%;
+      }
+    
+  }
+  
+  @media screen and (min-width: 921px) and (max-width: 991px) {
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex!important;
+    }
+    
+    .navbar {
+      padding: .5rem 0!important;
+    }
+    
+    .nav_bg {
+      width: 90%;
+      border-radius: 15px;
+    }
+  
+      .top_logo {
+          width: 8%;
+      }
+  
+      .top_logo img {
+        border-radius: 3px;
+        padding: 0.4rem;
+      }
+
+  .navbar-collapse {
+    background-color: var(--black);
+    margin-bottom: .5rem;
+  }
+
+  .courtyard_intro_logo {
+    width: 100%;
+  }
+  
+  .banner_content {
+    width: 40%;
+    padding: .3rem 0;
+  }
+
+  .banner_content h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner_content2 {
+    width: 40%;
+    padding: .3rem 0;
+  }
+
+  .banner_content2 h3 {
+    font-size: 1.3rem!important;
+  }
+
+  .banner_content2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .bg_slide {
+    height: 95vh;
+    background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+    background-size: 110% 100%;
+  }
+  
+  .slide1 {
+    height: 95vh;
+    background-size: 120% 100%;
+  }
+
+  .slide2 {
+    height: 95vh;
+    background-size: 120% 100%;
+  }
+
+  .courtyard_banner_intro_logo_box {
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    backdrop-filter: blur(1px);
+  }
+
+  .courtyard_banner_intro_logo {
+    width: 30%;
+  }
+
+  .mantra_bg {
+    height: 95vh;
+    background-size: 110% 100%;
+  }
+
+  .sticky-highlight {
+    height: 95vh;
+  }
+  
+  .highlight-text, .text-fill {
+    font-size: 2.3rem;
+  }
+
+  .profound_img {
+    width: 70%;
+  }
+
+  .profound_box {
+    width: 80%;
+  }
+
+  .harmony {
+    width: 90%;
+  }
+
+  .harmony_content h3 {
+    font-size: 1.2rem;
+  }
+
+  .harmony_content p {
+    font-size: .8rem;
+  }
+
+  .courtyard_homes_about_bg {
+    height: 95vh;
+    background: url('./images/intro_img/mob_courtyard_img_bg.jpg')no-repeat;
+    background-size: 100% 102%;
+  }   
+
+  .sutras_start_bg {
+    height: 90vh;
+  }
+
+  .sutras_intro {
+    width: 80%;
+  }
+
+  .sutra_start_content {
+    width: 70%;
+    padding: 2rem .2rem;
+  }
+
+  .content {
+    width: 80%;
+  }
+  
+  .about_bg {
+    height: 97vh;
+  }
+  
+  .about {
+    width: 40%;
+    height: fit-content;
+    padding: 2rem 0;
+  }
+
+  .about_img {
+    width: 50%;
+  }
+  
+  .slider_content_img {
+    width: 60%;
+  }
+
+  .timeless_allure_img {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+
+  .traditional {
+    width: 40%;
+  }
+  
+  .backyard_rose_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+  
+  .backyard_img {
+    width: 30%;
+    margin-top: .5rem;
+  }
+
+  .clubhouse_logo {
+    width: 20%;
+  }
+
+  .clubhouse_section {
+    background-size: 120% 100%;
+    background-position-x: -80px;
+  }
+
+  .clubhouse_section_content {
+    width: 35%;
+  }
+
+  .clubhouse_section_content h2,
+  .clubhouse_section_content h3,
+  .clubhouse_section_content p {
+    font-size: 1.2rem;
+  }
+
+  .clubhouse_section_img {
+    width: 60%;
+  }
+  
+  .aminities {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .image_height {
+    height: auto!important;
+  }
+
+    .imagin_lifestyle {
+      width: 40%;
+    }
+
+    .intro_logo {
+      width: 15%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .natural_order {
+      width: 40%;
+      margin-bottom: 2.01rem;
+    }
+
+    .col_margin {
+        margin-top: 5rem!important;
+    }
+
+    .float_none {
+        float: none!important;
+    }
+
+    .rewind_img_main {
+        width: 70%;
+        bottom: 7%;
+        left: 5%;
+    }
+
+    .aminity_div {
+      width: 61%;
+    }
+
+    .aminity_div2 {
+      width: 61%;
+    }
+
+    .aminity_div3 {
+      width: 61%;
+      padding: 3rem 2.5rem;
+    }
+
+    .form_focus {
+        margin: 0!important;
+        width: 100%!important;
+      }
+
+      .input_margin {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .input_margin2 {
+        margin:0!important;
+        width: 100%!important;
+      }
+
+      .label_margin {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .label_margin2 {
+        margin: 0!important;
+        left: 0!important;
+      }
+
+      .form-floating>label {
+        left: 0!important;
+      } 
+
+      .footer_logo {
+        width: 20%;
+      }
+    
+  }
+  
+
+
+  @media screen and (min-width: 992px) and (max-width: 1099px) {
+
+    .nav_bg {
+      width: 96%;
+    }
+
+    .bg_banner {
+        margin-top: 6.4%;
+    }
+
+     .link_hover {
+      font-size: .586rem!important;
+     }
+
+     .banner_content {
+      width: 30%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content h3 {
+      font-size: 1.5rem!important;
+    }
+
+    .banner_content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .banner_content2 {
+      width: 30%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content2 h3 {
+      font-size: 1.3rem!important;
+    }
+  
+    .banner_content2 h2 {
+      font-size: 1.5rem;
+    }
+
+    .bg_slide {
+      background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+      background-size: 110% 100%;
+    }
+
+    .courtyard_banner_intro_logo_box {
+      width: 30%;
+    }
+
+    .slide2 {
+      background-size: 110% 100%;
+    }
+    
+    .highlight-text, .text-fill {
+      font-size: 2.3rem;
+    }
+
+    .profound_img {
+      width: 52%;
+    }
+    
+    .profound_left_content {
+      gap: 1rem;
+    }
+    
+    .profound_box {
+      width: 90%;
+    }
+  
+    .profound_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_box p {
+      font-size: 0.8rem;
+    }
+  
+    .profound_right_content_box {
+      width: 90%;
+    }
+  
+    .profound_right_content_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_right_content_box p {
+      font-size: .8rem;
+    }
+
+    .harmony {
+      width: 60%;
+    }
+  
+    .harmony_content {
+      height: 350px;
+    }
+
+    .harmony_content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .harmony_content p {
+      font-size: .8rem;
+    }
+
+    .sutras_start_bg {
+      height: 95vh;
+    }
+  
+    .sutras_intro {
+      width: 65%;
+    }
+  
+    .sutra_start_content {
+      width: 60%;
+      padding: 2rem .2rem;
+    }
+  
+    .content {
+      width: 80%;
+    }
+
+    .backyard_img {
+      width: 28%;
+    }
+    
+    .img7_heading h2 {
+      margin-top: 1rem;
+      font-size: 1.2rem!important;
+    }
+
+    .img7_heading p {
+      font-size: .9rem!important;
+    }
+
+    .outdoor_amenities {
+      width: 90%;
+      padding: 0;
+    }
+
+    .outdoor_amenities h3 {
+      margin: 0;
+      font-size: 1.38rem;
+    }
+
+    .outdoor_amenities p {
+      font-size: .8rem;
+    }
+
+    .amenitiy_icon {
+      width: 32%;
+    }
+
+    .paragrapgh_font_size h3 {
+      font-size: 1.3rem;
+    }
+
+    .paragrapgh_font_size p {
+      font-size: .8rem;
+    }
+    
+    .carousel-control-prev {
+      display: none!important;
+    }
+
+    .carousel-control-next {
+      display: none!important;
+    }
+
+    .carousel-indicators {
+      bottom: -13%!important;
+    }
+
+    .imagin_lifestyle {
+      width: 40%;
+    }
+
+    /* .intro_bg {
+      height: 50vh;
+    } */
+
+    .intro_logo {
+      width: 15%;
+    }
+
+    .link_hover::after {
+        display: none;
+    }
+
+    .col_margin2 {
+        margin-top: 5rem!important;
+    }
+  
+    .rewind_img_main {
+        width: 70%;
+        left: 5%;
+    }
+
+    .courtyard_next_btn {
+      font-size: 1rem;
+      padding: .5rem .7rem;
+    }
+
+    .courtyard_prev_btn {
+      font-size: 1rem;
+      padding: .5rem .7rem;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 91.8%!important;
+      transform: translateX(-91.8%)!important;
+    }
+
+    .swiper .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      top: 6%!important;
+    }
+
+    .swiper .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      top: 6%!important;
+    }
+
+    /* .aminity_div {
+      width: 61%;
+    }
+
+    .aminity_div2 {
+      width: 61%;
+    }
+
+    .aminity_div3 {
+      width: 61%;
+      padding: 3rem 2.8rem;
+    } */
+
+    .location_highlights h3 {
+      font-size: 1.2rem;
+    }
+
+    .location_highlights p {
+      font-size: .8rem;
+      margin-bottom: 0;
+    }
+
+    .proximity h6 {
+      font-size: .8rem;
+    }
+
+    .input_margin {
+        margin: 0 0 0 8.7rem!important;
+        width: 81%!important;
+    }
+
+    .input_margin2 {
+        margin: 0 0 0 5.6rem!important;
+        width: 81%!important;
+    }
+  
+  }
+
+  @media screen and (min-width: 1100px) and (max-width: 1199px) {
+
+    .nav_bg {
+      width: 96%;
+    }
+    
+    .link_hover {
+      font-size: .67rem!important;
+     }
+
+     .banner_content {
+      width: 25%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content h3 {
+      font-size: 1.5rem!important;
+    }
+    .banner_content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .banner_content2 {
+      width: 30%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content2 h3 {
+      font-size: 1.3rem!important;
+    }
+  
+    .banner_content2 h2 {
+      font-size: 1.5rem;
+    }
+
+    .bg_slide {
+      background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+      background-size: 110% 100%;
+    }
+
+    .courtyard_banner_intro_logo_box {
+      width: 30%;
+    }
+
+    .highlight-text, .text-fill {
+      font-size: 2.3rem;
+    }
+
+    .profound_left_content {
+      gap: 1rem;
+    }
+    
+    .profound_img {
+      width: 52%;
+    }
+    
+    .profound_box {
+      width: 90%;
+    }
+  
+    .profound_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_box p {
+      font-size: 0.8rem;
+    }
+  
+    .profound_right_content_box {
+      width: 90%;
+    }
+  
+    .profound_right_content_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_right_content_box p {
+      font-size: .8rem;
+    }
+    
+    .harmony {
+      width: 60%;
+    }
+  
+    .harmony_content {
+      height: 350px;
+    }
+
+    .harmony_content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .harmony_content p {
+      font-size: .8rem;
+    }
+  
+    .sutras_intro {
+      width: 65%;
+    }
+  
+    .content {
+      width: 80%;
+    }
+    
+    .backyard_img {
+      width: 29%;
+    }
+    
+    .img7_heading h2 {
+      margin-top: 1rem;
+      font-size: 1.2rem!important;
+    }
+
+    .img7_heading p {
+      font-size: 1rem!important;
+    }
+
+    .outdoor_amenities {
+      width: 90%;
+      padding: 0;
+    }
+
+    .outdoor_amenities h3 {
+      margin: 0;
+      font-size: 1.38rem;
+    }
+
+    .outdoor_amenities p {
+      font-size: .8rem;
+    }
+
+    .amenitiy_icon {
+      width: 27%;
+    }
+
+    .paragrapgh_font_size h3 {
+      font-size: 1rem;
+    }
+
+    .paragrapgh_font_size p {
+      font-size: .8rem;
+    }
+    
+    .carousel-control-next {
+      display: none!important;
+    }
+
+    .carousel-indicators {
+      bottom: -10%!important;
+    }
+
+    .intro_logo {
+      width: 17%;
+    }
+
+    .imagin_lifestyle {
+      width: 40%;
+    }
+
+    .courtyard_next_btn {
+      font-size: 1.1rem;
+      padding: .7rem .9rem;
+      right: 15%!important;
+      transform: translateX(-15%)!important;
+    }
+
+    .courtyard_prev_btn {
+      font-size: 1.1rem;
+      padding: .7rem .9rem;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 92%!important;
+      transform: translateX(-92%);
+    }
+
+    .swiper .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      top: 6%!important;
+    }
+
+    .swiper .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      top: 6%!important;
+    }
+
+    /* .aminity_div {
+      width: 65%;
+    }
+
+    .aminity_div2 {
+      width: 65%;
+    }
+
+    .aminity_div3 {
+      width: 65%;
+      padding: 3rem 2.5rem;
+    } */
+
+    .location_highlights h3 {
+      font-size: 1.2rem;
+    }
+
+    .location_highlights p {
+      font-size: .8rem;
+      margin-bottom: 0;
+    }
+
+    .proximity h6 {
+      font-size: .8rem;
+    }
+
+    .input_margin {
+        margin: 0 0 0 8.9rem!important;
+        width: 81%!important;
+    }
+
+    .input_margin2 {
+        margin: 0 0 0 5.6rem!important;
+        width: 81%!important;
+    }
+
+      .label_margin {
+        margin: 0 0 0 -15%!important;
+      }
+
+      .label_margin2 {
+        margin: 0 0 0 -15%!important;
+      }
+  }
+
+
+  @media screen and (min-width: 1200px) and (max-width: 1275px) {
+
+    .nav_bg {
+      width: 96%;
+    }
+
+    .link_hover {
+      font-size: .75rem!important;
+    }
+    
+    .banner_content {
+      width: 30%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content h3 {
+      font-size: 1.7rem!important;
+    }
+    .banner_content h1 {
+      font-size: 1.7rem;
+    }
+  
+    .banner_content2 {
+      width: 30%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content2 h3 {
+      font-size: 1.5rem!important;
+    }
+  
+    .banner_content2 h2 {
+      font-size: 1.7rem;
+    }
+
+    .bg_slide {
+      background: url('images/Skanda_Nilaya_06.jpg')no-repeat top center;
+      background-size: 110% 110%;
+    }
+
+    .courtyard_banner_intro_logo_box {
+      width: 30%;
+    }
+
+    .highlight-text, .text-fill {
+      font-size: 2.3rem;
+    }
+
+    .profound_img {
+      width: 45%;
+    }
+    
+    .profound_left_content {
+      gap: 1rem;
+    }
+    
+    .profound_box {
+      width: 50%;
+    }
+  
+    .profound_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_box p {
+      font-size: 0.8rem;
+    }
+  
+    .profound_right_content_box {
+      width: 80%;
+    }
+  
+    .profound_right_content_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_right_content_box p {
+      font-size: .8rem;
+    }
+    
+    .harmony {
+      width: 60%;
+    }
+  
+    .harmony_content {
+      height: 350px;
+    }
+
+    .harmony_content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .harmony_content p {
+      font-size: .8rem;
+    }
+
+    .sutras_intro {
+      width: 60%;
+    }
+  
+    .content {
+      width: 80%;
+    }
+    
+    .courtyard_next_btn {
+      font-size: 1.1rem;
+      padding: .7rem .9rem;
+      right: 15%!important;
+      transform: translateX(-15%)!important;
+    }
+
+    .courtyard_prev_btn {
+      font-size: 1.1rem;
+      padding: .7rem .9rem;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 92.5%!important;
+      transform: translateX(-92.5%);
+    }
+
+    .swiper .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      top: 6%!important;
+    }
+
+    .swiper .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      top: 6%!important;
+    }
+
+    .backyard_img {
+      width: 30%;
+    }
+    
+    .img7_heading h2 {
+      margin-top: 1rem;
+      font-size: 1.3rem!important;
+    }
+
+    .img7_heading p {
+      font-size: 1rem!important;
+    }
+
+    .paragrapgh_font_size h3 {
+      font-size: 1rem;
+    }
+
+    .paragrapgh_font_size p {
+      font-size: .8rem;
+    }
+
+    .outdoor_amenities {
+      width: 90%;
+      padding: 0;
+    }
+
+    .outdoor_amenities h3 {
+      margin: 0;
+      font-size: 1.38rem;
+    }
+
+    .outdoor_amenities p {
+      font-size: .8rem;
+    }
+
+    .amenitiy_icon {
+      width: 25%;
+    }
+
+    .location_highlights h3 {
+      font-size: 1.2rem;
+    }
+
+    .location_highlights p {
+      font-size: .8rem;
+      margin-bottom: 0;
+    }
+
+    .proximity h6 {
+      font-size: .8rem;
+    }
+
+    /* .aminity_div {
+      width: 55%;
+    }
+
+    .aminity_div2 {
+      width: 55%;
+    }
+
+    .aminity_div3 {
+      width: 55%;
+      padding: 3rem 2.5rem;
+    } */
+
+    .input_margin {
+        margin: 0 0 0 10.5rem!important;
+        width: 83%!important;
+    }
+
+    .input_margin2 {
+        margin: 0 0 0 6.6rem!important;
+        width: 81%!important;
+    }
+  }
+
+  @media screen and (min-width: 1276px) and (max-width: 1399px) {
+
+    .nav_bg {
+      width: 96%;
+    }
+
+    .link_hover {
+      font-size: .75rem!important;
+    }
+    
+    .banner_content {
+      width: 25%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content h3 {
+      font-size: 1.7rem!important;
+    }
+    .banner_content h1 {
+      font-size: 1.7rem;
+    }
+  
+    .banner_content2 {
+      width: 25%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content2 h3 {
+      font-size: 1.5rem!important;
+    }
+  
+    .banner_content2 h2 {
+      font-size: 1.7rem;
+    }
+
+    .harmony {
+      width: 60%;
+    }
+  
+    .harmony_content {
+      height: 350px;
+    }
+
+    .harmony_content h3 {
+      font-size: 1.5rem;
+    }
+  
+    .harmony_content p {
+      font-size: .9rem;
+    }
+
+    .courtyard_next_btn {
+      font-size: 1.1rem;
+      padding: .7rem .9rem;
+      right: 15%!important;
+      transform: translateX(-15%)!important;
+    }
+
+    .courtyard_prev_btn {
+      font-size: 1.1rem;
+      padding: .7rem .9rem;
+    }
+
+    .highlight-text, .text-fill {
+      font-size: 2.5rem;
+    }
+
+    .profound_img {
+      width: 50%;
+    }
+
+    .profound_left_content {
+      gap: 1rem;
+    }
+    
+    .profound_box {
+      width: 50%;
+    }
+  
+    .profound_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_box p {
+      font-size: 0.8rem;
+    }
+  
+    .profound_right_content_box {
+      width: 80%;
+    }
+  
+    .profound_right_content_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_right_content_box p {
+      font-size: .8rem;
+    }
+
+    .sutras_intro {
+      width: 55%;
+    }
+  
+    .content {
+      width: 80%;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 93%!important;
+      transform: translateX(-93%);
+    }
+
+    .swiper .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      top: 6%!important;
+    }
+
+    .swiper .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      top: 6%!important;
+    }
+
+    .backyard_img {
+      width: 36%;
+    }
+    
+    .img7_heading h2 {
+      margin: 1rem 0 0 0;
+      font-size: 1.3rem!important;
+    }
+
+    .img7_heading p {
+      font-size: 1rem!important;
+    }
+
+    .paragrapgh_font_size h3 {
+      font-size: 1.3rem;
+    }
+
+    .paragrapgh_font_size p {
+      font-size: .8rem;
+    }
+
+
+    /* .aminity_div {
+      width: 55%;
+    }
+
+    .aminity_div2 {
+      width: 55%;
+    }
+
+    .aminity_div3 {
+      width: 55%;
+      padding: 3rem 2.5rem;
+    } */
+
+    .outdoor_amenities {
+      width: 85%;
+      padding: 0;
+    }
+
+    .location_highlights h3 {
+      font-size: 1.2rem;
+    }
+
+    .location_highlights p {
+      font-size: .8rem;
+      margin-bottom: 0;
+    }
+
+    .proximity h6 {
+      font-size: .8rem;
+    }
+
+    .amenitiy_icon {
+      width: 25%;
+    }
+
+    .input_margin {
+        margin: 0 0 0 10.5rem!important;
+        width: 83%!important;
+    }
+
+    .input_margin2 {
+        margin: 0 0 0 6.6rem!important;
+        width: 81%!important;
+    }
+  }
+
+
+  @media screen and (min-width: 1400px) and (max-width: 1599px) {
+
+    .nav_bg {
+      width: 80%;
+    }
+
+    .link_hover {
+      font-size: .72rem!important;
+    }
+    
+    .banner_content {
+      width: 25%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content h3 {
+      font-size: 1.7rem!important;
+    }
+    .banner_content h1 {
+      font-size: 1.7rem;
+    }
+  
+    .banner_content2 {
+      width: 25%;
+      padding: .3rem 0;
+    }
+  
+    .banner_content2 h3 {
+      font-size: 1.5rem!important;
+    }
+  
+    .banner_content2 h2 {
+      font-size: 1.7rem;
+    }
+
+    .profound_left_content {
+      gap: 1rem;
+    }
+    
+    .profound_box {
+      width: 50%;
+    }
+  
+    .profound_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_box p {
+      font-size: 0.8rem;
+    }
+  
+    .profound_right_content_box {
+      width: 70%;
+    }
+  
+    .profound_right_content_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_right_content_box p {
+      font-size: .8rem;
+    }
+
+    .content {
+      width: 80%;
+    }
+
+    .backyard_img {
+      width: 41%;
+    }
+    
+    .img7_heading h2 {
+      margin: 1rem 0 0 0;
+      font-size: 1.3rem!important;
+    }
+
+    .img7_heading p {
+      font-size: 1rem!important;
+    }
+
+    .rewind_img_main {
+        width: 90%;
+        /* bottom: -25%; */
+        left: 5%;
+    }
+
+    .courtyard_next_btn {
+      font-size: 1.1rem;
+      padding: .7rem .9rem;
+      right: 15%!important;
+      transform: translateX(-15%)!important;
+    }
+
+    .courtyard_prev_btn {
+      font-size: 1.1rem;
+      padding: .7rem .9rem;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 93.5%!important;
+      transform: translateX(-93.5%)!important;
+    }
+
+    .swiper .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      top: 6%!important;
+    }
+
+    .swiper .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      top: 6%!important;
+    }
+
+    .outdoor_amenities {
+      width: 85%;
+      padding: 0;
+    }
+
+    .amenitiy_icon {
+      width: 23%;
+    }
+
+    .location_highlights h3 {
+      font-size: 1.5rem;
+    }
+
+    .location_highlights p {
+      font-size: .8rem;
+      margin-bottom: 0;
+    }
+
+    .proximity h6 {
+      font-size: .8rem;
+    }
+
+      .input_margin {
+        margin: 0 0 0 12.2rem!important;
+        width: 83%!important;
+    }
+
+    .input_margin2 {
+        margin: 0 0 0 7.7rem!important;
+        width: 81%!important;
+    }
+
+      .label_margin {
+        margin: 0 0 0 -15%!important;
+      }
+
+      .label_margin2 {
+        margin: 0 0 0 -15%!important;
+      }
+
+  }
+
+  @media screen and (min-width: 1600px) and (max-width: 1799px) {
+
+    .nav_bg {
+      width: 80%;
+    }
+    
+    .bg_banner {
+        margin-top: 5.4%;
+    }
+
+    .banner_img_overlay {
+      width: 40%;
+    }
+
+    .profound_left_content {
+      gap: 1rem;
+    }
+    
+    .profound_box {
+      width: 50%;
+    }
+  
+    .profound_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_box p {
+      font-size: 0.8rem;
+    }
+  
+    .profound_right_content_box {
+      width: 70%;
+    }
+  
+    .profound_right_content_box h2 {
+      font-size: 1.7rem;
+    }
+  
+    .profound_right_content_box p {
+      font-size: .8rem;
+    }
+    
+    .rewind_img_main {
+        width: 90%;
+        /* bottom: -25%; */
+        left: 5%;
+    }
+
+    .backyard_img {
+      width: 45%;
+    }
+    
+    .img7_heading h2 {
+      margin: 1rem 0 0 0;
+      font-size: 1.5rem!important;
+    }
+
+    .img7_heading p {
+      font-size: 1rem!important;
+    }
+
+    .courtyard_next_btn {
+      padding: .9rem 1.2rem;
+      right: 20%!important;
+      transform: translateX(-20%)!important;
+    }
+
+    .courtyard_prev_btn {
+      padding: .9rem 1.2rem;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 93.2%!important;
+      transform: translateX(-93.2%)!important;
+    }
+
+    .swiper .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      top: 6%!important;
+    }
+
+    .swiper .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      top: 6%!important;
+    }
+
+    .gallery_slider {
+      height: 55vh;
+    }
+
+    .carousel-cell1 {
+      height: 55vh;
+    }
+
+      .input_margin {
+        margin: 0 0 0 12.2rem!important;
+        width: 83%!important;
+    }
+
+    .input_margin2 {
+        margin: 0 0 0 7.7rem!important;
+        width: 81%!important;
+    }
+
+      .label_margin {
+        margin: 0 0 0 -15%!important;
+      }
+
+      .label_margin2 {
+        margin: 0 0 0 -15%!important;
+      }
+
+  }
+
+
+
+  .shapedividers_com-4008{
+    overflow:hidden;
+    position:relative;
+    }
+    .shapedividers_com-4008::before{
+    content:'';
+    font-family:'shape divider from ShapeDividers.com';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat; 
+    background-size: 235% 45px;
+    background-position: 35% 0%;    
+    transform: rotateY(180deg);
+    background-image: url('data:image/svg+xml;charset=utf8, <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><g fill="%23faf5ee"><path d="M0 72c4 2 11 3 15-1 3-3 5-8 10-10 5-3 11-1 15 3l5 6a18 18 0 007 4 12 12 0 0013-4c2-2 3-9 8-8 3 1 4 4 6 6 7 7 18 2 22-6 1-2 4-6 8-5a7 7 0 014 3c0 4 2 7 6 9 4 3 11 3 15 0 3-3 5-8 9-10 5-2 12-1 16 3 2 1 2 4 5 6a19 19 0 006 4 12 12 0 0013-4c2-2 4-9 8-8 3 1 5 4 7 6 7 7 17 2 21-5 2-3 5-6 8-6s5 5 7 8a13 13 0 008 6c5 2 8-5 11-9 5-6 9 0 12 4s11 4 14 0l4-6c6-8 11 9 14 12 4 4 9 5 14 2 4-3 6-8 8-12 2-3 4-6 7-4 3 1 5 4 6 6a19 19 0 005 8c4 4 11 3 15 0s5-8 10-10 11-1 15 3l5 6a18 18 0 007 4 12 12 0 0013-4c2-2 4-9 8-8 3 1 4 4 6 6 8 7 18 2 22-5 2-3 4-6 8-6s5 5 7 8a13 13 0 007 6c6 1 8-6 11-9 5-6 9 0 13 4 3 4 11 4 14 0l3-6c6-8 12 9 14 12 4 4 10 5 15 2 4-3 6-8 8-12 4-8 9-1 14 3 3 8 12 13 19 7 4-3 5-9 10-10 5-3 11-1 15 3l5 6a19 19 0 007 4 12 12 0 0013-4c2-2 3-9 8-8 3 1 4 4 6 6 7 7 18 2 22-6 1-2 4-6 8-5s5 5 6 8a13 13 0 008 6c6 1 8-6 11-9 5-6 9 0 12 4s11 4 15 0l3-6c6-8 12 9 14 12 4 4 9 5 14 2 4-3 6-8 9-12 1-3 3-6 7-4 2 1 4 3 5 6a19 19 0 005 8c4 4 12 3 16 0 3-4 5-9 9-11 5-2 12 0 15 3 3 2 3 5 5 7a18 18 0 007 4 12 12 0 0013-4c2-2 4-9 8-8 3 1 4 4 7 6 7 7 17 2 21-6 2-2 5-6 8-5s5 5 7 7a13 13 0 008 7c5 1 8-6 11-9 5-6 9 0 12 4s11 4 14 0c2-2 2-5 4-6 6-8 11 9 14 12 4 4 9 5 14 2 4-3 6-8 8-12 4-7 11-2 14 3 1 1 3 3 5 3s6-4 6-7V51c1 2-4 6-6 6s-4-2-5-3c-3-4-10-10-14-3-2 4-4 9-8 12-5 3-10 2-14-2-3-3-8-20-14-12l-4 6c-3 4-11 4-14 0s-7-10-12-4c-3 3-6 11-11 9a13 13 0 01-8-6c-2-3-3-7-7-8s-6 3-8 6c-4 7-14 12-21 5-3-2-4-5-7-5-4-2-6 5-8 7a12 12 0 01-13 4 18 18 0 01-7-4c-2-2-2-5-5-6-3-4-10-5-15-3-4 2-6 7-9 10-4 3-12 4-16 0a19 19 0 01-5-8l-5-6c-4-2-6 1-7 4-3 4-5 9-9 12-5 3-10 2-14-2-2-3-8-20-14-12-2 2-2 5-3 7-4 3-12 3-15-1s-7-10-12-4c-3 4-5 11-11 9a13 13 0 01-8-6c-1-3-3-7-6-8s-7 3-8 6c-4 7-15 12-22 5-2-2-3-5-6-5-5-2-6 5-8 7a12 12 0 01-13 4 19 19 0 01-7-4l-5-6c-4-4-11-5-15-3-5 2-7 7-10 10-7 6-17 1-19-7-5-4-10-11-14-3-2 4-4 9-8 12-5 3-11 2-15-2-2-3-8-20-14-12-2 2-2 5-3 7-4 3-11 3-14-1-4-4-8-10-13-4-3 4-5 11-11 9a13 13 0 01-7-6c-2-3-4-7-7-8s-7 3-8 6c-4 7-15 12-22 5-2-1-3-5-6-5-5-2-6 5-8 7a12 12 0 01-13 4 18 18 0 01-7-4l-5-6c-4-4-10-5-15-3s-6 7-10 10c-4 4-11 4-15 1a19 19 0 01-5-9c-1-2-3-5-6-6-3-2-5 1-7 4-2 4-4 9-8 12-5 3-10 2-14-2-3-3-8-19-14-12l-4 7c-3 4-11 3-14-1s-7-10-12-4c-3 4-5 11-11 9a13 13 0 01-8-6c-2-3-3-7-7-8s-6 3-8 6c-4 7-14 12-21 5-3-1-4-5-7-5-4-1-6 5-8 7a12 12 0 01-13 4 19 19 0 01-7-4c-2-1-2-4-5-6-3-3-10-5-15-3-4 2-6 7-9 10-4 4-11 3-16 1-3-2-5-6-5-10a7 7 0 00-5-3c-3-1-6 3-7 6-4 7-15 12-22 6-2-2-3-6-6-6-5-2-6 5-8 8a12 12 0 01-13 3 18 18 0 01-7-4l-5-6c-4-4-10-5-15-3s-7 7-10 10c-4 4-11 3-15 1s-5-6-6-10v7c0 6 1 12 6 15z" opacity=".3"/><path d="M0 60c4 2 11 3 15-1 3-3 5-8 10-10s11-1 15 3l5 6a18 18 0 007 5 12 12 0 0013-4c2-3 3-10 8-8 3 0 4 4 6 6 7 6 18 1 22-6 1-3 4-6 8-6a7 7 0 014 3c0 4 2 8 6 10s11 3 15-1c3-3 5-8 9-10 5-2 12 0 16 3 2 2 2 5 5 7a19 19 0 006 3 12 12 0 0013-3c2-3 4-9 8-8 3 1 5 4 7 6 7 6 17 1 21-6 2-3 5-6 8-5s5 4 7 7a13 13 0 008 6c5 2 8-5 11-9 5-6 9 0 12 4s11 5 14 1c2-2 2-5 3-7 7-7 12 9 15 12 4 4 9 5 14 2 4-3 6-8 8-12 2-3 4-6 7-4 3 1 5 4 6 6a19 19 0 005 9c4 3 11 3 15-1 4-3 5-8 10-10s11-1 15 3l5 6a18 18 0 007 4 12 12 0 0013-4c2-2 3-9 8-7 3 0 4 4 6 5 7 7 18 2 22-5 2-3 4-6 8-6s5 5 7 8a13 13 0 007 6c6 2 8-5 11-9 5-6 9 0 13 4 3 4 10 4 14 1 1-2 1-5 3-7 6-8 12 9 14 12 4 4 10 5 15 2 4-3 6-8 8-12 4-8 9-1 14 3 3 8 12 13 19 7 3-3 5-8 10-10 4-2 11-1 15 3l5 6a19 19 0 007 4 12 12 0 0013-4c2-2 3-9 8-7 3 0 4 3 6 5 7 7 18 2 22-5 1-3 4-6 8-6s5 5 6 8a13 13 0 008 6c6 2 8-5 11-9 5-6 9 0 12 4s11 4 15 1c1-2 1-5 3-7 6-8 12 9 14 12 4 4 9 5 14 2 4-3 6-8 9-12 1-3 3-6 7-4l5 6a19 19 0 005 8c4 4 12 3 16 0 3-3 5-8 9-10 5-2 12-1 15 3 3 2 3 4 5 6a18 18 0 007 4 12 12 0 0013-4c2-2 4-9 8-8 3 1 4 4 7 6 7 7 17 2 21-5 2-3 5-6 8-6s5 5 7 8a13 13 0 008 6c5 2 8-5 11-9 5-6 9 0 12 4s11 4 14 0l3-6c7-8 12 9 15 12 4 4 9 5 14 2 4-3 6-8 8-12 4-7 11-1 14 3 1 2 3 3 5 3s6-4 6-6V0H-6v5l1 25-1 20c1 4 2 8 6 10z"/></g></svg>'); 
+    }
+    
+    @media (min-width:768px){
+    .shapedividers_com-4008::before{
+    background-size: 235% 50px;
+    background-position: 26% 0%;  
+    transform: rotateY(180deg); 
+    }  
+    }
+     
+    @media (min-width:1025px){
+    .shapedividers_com-4008::before{ 
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw; 
+    background-size: 100% 34px;
+    background-position: 50% 0%; 
+    transform: rotateY(180deg); 
+    }
+    }
+    @media (min-width:2100px){
+    .shapedividers_com-4008::before{
+    background-size: 100% calc(2vw + 34px);
+    }
+    }
+     
+     
+     
+     
+     
