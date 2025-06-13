@@ -1079,8 +1079,11 @@ h1, p, a, h4 {
 
 .timeless_allure_img {
   width: 50%;
-  margin-left: -6rem;
   transition: all ease .5s;
+}
+
+#sustainable {
+  margin-left: -6rem;
 }
 
 .traditional {
