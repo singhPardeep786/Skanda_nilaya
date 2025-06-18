@@ -216,6 +216,70 @@ h1, p, a, h4 {
   transform: translateY(-30%) translateX(-15%);
 }
 
+.whatsapp_icon {
+  width: auto;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 12;
+}
+
+.whatsapp_icon a {
+  width: fit-content;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+.whatsapp_icon a:nth-child(1) {
+  width: auto;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  background-color: var(--white);
+  border: 1px solid var(--lightbrown);
+  padding: 0.5rem;
+  color: var(--maincolor);
+  position: absolute;
+  top: -90%;
+  left: 0;
+  transform: translateX(-110%);
+  transition: all 0.5s ease;
+  white-space: nowrap;
+}
+
+.whatsapp_icon a:nth-child(2) {
+  width: fit-content;
+  margin: 0;
+  font-size: 2.5rem;
+  border: 1px solid var(--lightbrown);
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.whatsapp_icon:hover a:nth-child(1) {
+  transform: translateX(0);
+}
+
+/* .whatsapp_icon::after {
+  content: 'How can i help you';
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: var(--white);
+  border: 1px solid var(--maincolor);
+  border-radius: 1rem;
+  top: -5%;
+  right: -10%;
+  visibility: hidden;
+  transition: all ease .5s;
+}
+
+.whatsapp_icon:hover::after {
+  visibility: visible;
+  top: 0;
+} */
+
 /* --------------FIXED---ICON---END----------- */
 
 
@@ -2289,7 +2353,7 @@ color:var(--white);
     margin-top: 1rem;
     /* overflow: hidden; */
     transition: ease .5s;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .submit_btn:hover {
@@ -2350,7 +2414,7 @@ color:var(--white);
     width: 30%;
     background-color: var(--white);
     padding: 1rem;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .icons {
@@ -2361,7 +2425,7 @@ color:var(--white);
     color: var(--white);
     border: 1px solid var(--white);
     background-color: transparent;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: .85rem 1.1rem;
     transition: ease .5s;
     position: relative;
@@ -2394,7 +2458,7 @@ bottom: 0;
     color: var(--white);
     border: 1px solid var(--white);
     background-color: transparent;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: .85rem;
     transition: ease .5s;
     position: relative;

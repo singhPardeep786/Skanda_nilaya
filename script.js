@@ -1,3 +1,5 @@
+
+
 //====TO---TOP---BUTTON---START====//
 
 const topBtn = document.querySelector('.to_top_btn');
@@ -266,6 +268,15 @@ document.querySelectorAll('.link_hover').forEach(link => {
 });
 
 NavarAnimation();
+
+//=======FORM---RESET---ONSUBMIT=========//
+
+// const form = document.querySelector('form');
+// form.addEventListener('submit', (e) => {
+//   form.reset();
+// });
+
+//=======FORM---RESET---ONSUBMIT=========//
 
 
 // var swiper = new Swiper(".mySwiper", {
